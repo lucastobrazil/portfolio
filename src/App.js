@@ -1,18 +1,24 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import styles from './App.less';
+import Header from './sections/Header';
+import Section from './components/Section';
+
 
 class App extends Component {
   render() {
     return (
-      <div className={styles.container}>
-        <header className={styles.header}>
-          <img src={logo} className={styles.logo} alt="logo" />
-          <h1 className={styles.title}>Welcome to React</h1>
-        </header>
-        <p className={styles.intro}>
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div>
+        <Header />
+        <Section>
+          <p>
+            My 10 years’ experience has been quite broad.
+          </p>
+          <p>
+            From HTML, CSS and JavaScript development to Design and Digital Media production, what I’ve learned about myself is that I love solving problems, working with people and using tools to build things.
+          </p>
+          <p>
+            Check out some highlights below:
+          </p>
+        </Section>
       </div>
     );
   }

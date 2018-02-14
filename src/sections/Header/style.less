@@ -1,0 +1,27 @@
+@import '../../styles/vars.less';
+
+.header {
+    background-color:@darkColor;
+    padding: 0;
+    color: white;
+}
+
+.bubbleContainer {
+    position: relative;
+
+    .greeting,
+    img {
+        position: absolute;
+    }
+
+    .greeting {
+        font-family: @fontFamilySansSerif;
+        right: 180px;
+        font-size: @labelFontSize;
+        text-transform: uppercase;
+    }
+    img {
+        right: 0;
+        top: -@basePadding;
+    }
+}
