@@ -1,0 +1,38 @@
+@import '../../styles/vars.less';
+@workItemPadding: (@basePadding / 3);
+@headerHeight: 120px;
+
+.container {
+    font-size: @fontSizeS;
+
+    h2 {
+        font-family: @fontFamilySansSerif;
+        color: @primaryColor;
+    }
+}
+
+.inner {
+    display: flex;
+    flex-direction: column;
+    padding: (@basePadding / 3);
+    box-shadow: 0 2px 3px rgba(0,0,0,0.3);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    margin: -@workItemPadding -@workItemPadding @workItemPadding -@workItemPadding;
+
+    h1 {
+        font-family: @fontFamilySansSerif;
+        font-weight: normal;
+        padding: @workItemPadding;
+        color: @white;
+        z-index: 2;
+        margin: 0;
+    }
+}
+
+.detailButton {
+
+}

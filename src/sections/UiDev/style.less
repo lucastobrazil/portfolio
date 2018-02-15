@@ -1,0 +1,24 @@
+@import '../../styles/vars.less';
+@import '../../styles/responsive-mixins.less';
+
+@itemSpacing: (@basePadding / 3);
+.workItemGrid {
+    display: flex;
+    flex-wrap: wrap;
+
+    .widthMin(XS, {
+        margin: 0 -@itemSpacing;
+    });
+
+    article {
+        flex-basis: 100%;
+        padding-bottom: @itemSpacing;
+
+        .widthMin(XS, {
+            flex-shrink: 1;
+            flex-basis: 45%;
+            padding: @itemSpacing;
+        });
+
+    }
+}

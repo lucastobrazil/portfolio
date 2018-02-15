@@ -1,0 +1,26 @@
+@import '../../styles/vars.less';
+
+.container {
+    padding: 20px;
+    border-width: 1px 0;
+    border-style: solid;
+    border-color: @borderGrey;
+    font-size: @fontSizeS;
+
+    & + & {
+        border-top: none;
+    }
+
+    h1 {
+        margin: 0;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+}
+
+.inner {
+    display: flex;
+    justify-content: space-between;
+}

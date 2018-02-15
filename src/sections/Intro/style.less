@@ -1,14 +1,10 @@
 @import '../../styles/vars.less';
 
 .header {
-    background-color: @primaryColor;
+    background-color:@darkColor;
     padding: 0;
     color: @white;
-    border-top: 10px solid @darkColor;
-}
-
-.subHeading {
-    max-width: 415px;
+    border-top: 10px solid @primaryColor;
 }
 
 .bubbleContainer {
@@ -23,13 +19,13 @@
 
     .greeting {
         font-family: @fontFamilySansSerif;
-        right: 200px;
+        right: 180px;
         font-size: @fontSizeS;
         text-transform: uppercase;
-        margin-top: -3em;
+        margin-top: -2em;
     }
     img {
         right: 0;
-        top: -140px;
+        top: -(@profileBubbleSize / 2);
     }
 }

@@ -1,0 +1,86 @@
+@import '../../styles/vars.less';
+@import '../../styles/responsive-mixins.less';
+
+/* Remove scroll on the body when react-modal is open */
+:global(.ReactModal__Body--open) {
+    overflow: hidden;
+  }
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: @overlayBackgroundColor;
+    overflow-y: auto;
+    display: flex;
+    align-items: center;
+    z-index: 900;
+    transition-property: opacity;
+    transition-timing-function: ease-in-out;
+    opacity: 0;
+
+    &:global(.ReactModal__Overlay) {
+        &--after-open {
+            opacity: 1;
+        }
+        &--before-close {
+            opacity: 0;
+        }
+    }
+}
+
+.content {
+    background-position-y: 100%;
+    background-color: @white;
+    position: relative;
+    display: block;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: @borderRadius;
+    border: 1px solid @borderGrey;
+    padding: @modalPadding;
+    flex-shrink: 1;
+
+    .widthMax(S, {
+        padding: 20px;
+    });
+
+    .widthMax(XXS, {
+        padding: 20px;
+    });
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.close {
+    background: none;
+    border: none;
+    position: absolute;
+    color: @primaryColor;
+    top: @modalPadding;
+    font-size: 15px;
+    cursor: pointer;
+
+    &.right {
+        right: (@modalPadding / 2);
+    }
+    img {
+        vertical-align: sub;
+        width: 20px;
+        height: 20px;
+        opacity: .7;
+    }
+
+    &:hover {
+        img {
+            opacity: 1;
+        }
+    }
+}
