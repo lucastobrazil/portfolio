@@ -40,6 +40,7 @@ const workItemMiniData = [
 
 export default function UiDev() {
     return <Section>
+        <h1>UI Design and Development</h1>
         <div className={styles.workItemGrid}>
             {workItems.map(itemProps => <WorkItem {...itemProps} />)}
         </div>

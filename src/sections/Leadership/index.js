@@ -4,7 +4,7 @@ import Image from '../../components/Section/Image';
 
 export default function Leadership() {
     return <Section>
-
+        <h1>Leadership and Coordination</h1>
         <p>I love thinking of a team as an orchestra.  Where each department / faculty can represent a player and together, we perform some awesome pieces.</p>
 <p>After many years of ….. I’ve discovered my love of being the conductor.</p>
 
