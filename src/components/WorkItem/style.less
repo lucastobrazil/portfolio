@@ -1,38 +1,55 @@
 @import '../../styles/vars.less';
 @workItemPadding: (@basePadding / 3);
-@headerHeight: 120px;
-
-.container {
-    font-size: @fontSizeS;
-
-    h2 {
-        font-family: @fontFamilySansSerif;
-        color: @primaryColor;
-    }
-}
+@height: 200px;
 
 .inner {
+    position: relative;
     display: flex;
+    align-items: stretch;
+    text-align: left;
+    padding: 0;
     flex-direction: column;
-    padding: (@basePadding / 3);
+    height: @height;
+    width: 100%;
     box-shadow: 0 2px 3px rgba(0,0,0,0.3);
+    background: @white;
+    font-size: inherit;
+
+    .cover {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: @darkColor;
+        opacity: 0;
+        z-index: 2;
+    }
+
+    &:hover {
+        .cover {
+            opacity: .6;
+        }
+        cursor: pointer;
+    }
 }
 
 .header {
     display: flex;
     align-items: center;
-    margin: -@workItemPadding -@workItemPadding @workItemPadding -@workItemPadding;
+    width: 100%;
+    height: @height;
+    width: 100%;
+    background-size: cover;
+    opacity: 0.5;
+}
 
+.content {
+    padding: @workItemPadding;
+    position: absolute;
+    bottom: 0;
     h1 {
         font-family: @fontFamilySansSerif;
-        font-weight: normal;
-        padding: @workItemPadding;
-        color: @white;
+        margin: @workItemPadding;
         z-index: 2;
         margin: 0;
     }
-}
-
-.detailButton {
-
 }

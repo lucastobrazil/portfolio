@@ -39,12 +39,12 @@ const workItemMiniData = [
 ]
 
 export default function UiDev() {
-    return <Section>
+    return <Section className={styles.container} name="UiDev">
         <h1>UI Design and Development</h1>
         <div className={styles.workItemGrid}>
-            {workItems.map(itemProps => <WorkItem {...itemProps} />)}
+            {workItems.map((itemProps, i) => <WorkItem {...itemProps} category="UI Design and Development" key={i} />)}
         </div>
-        {workItemMiniData.map(itemProps => <WorkItemMini {...itemProps} />)}
+        {workItemMiniData.map((itemProps, i) => <WorkItemMini {...itemProps} key={i}  />)}
         <p>I started coding Visual Basic back in High School, and learned HTML and CSS to create websites for various bands I played in. I have since developed a professional career in developing complex web applications, brochure-style websites, native apps and experimental apps using technologies like React Native.</p>
         <Image src="https://static.pexels.com/photos/371633/pexels-photo-371633.jpeg" />
     </Section>;

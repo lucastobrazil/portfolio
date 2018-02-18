@@ -4,6 +4,7 @@ import styles from './style.less';
 import Button from '../Button';
 import bgImage from '../../bg.svg';
 import Modal from '../Modal';
+import Detail from './Detail';
 
 const propTypes = {
     title: PropTypes.string,
@@ -29,22 +30,24 @@ export default class WorkItem extends Component {
     toggleModal = () => this.setState({ modalOpen: !this.state.modalOpen });
 
     render() {
-        const { title, overview, tools, body, backgroundImage, onClick } = this.props;
+        const { title, overview, modalContent, category } = this.props;
         const { modalOpen } = this.state;
+        const detailProps = {
+            ...modalContent,
+            title,
+            category
+        };
         return (
             <article button className={styles.container}>
-                <div className={styles.inner}>
-                    <header className={styles.header} style={{ backgroundImage: `url(${bgImage})` }}>
-                        <h1>{title}</h1>
+                <button className={styles.inner} onClick={this.toggleModal}>
+                    <div className={styles.cover} />
+                    <header className={styles.header} style={{ backgroundImage: `url(${modalContent.heroImage})` }}>
                     </header>
-                    <h2> Overview</h2>
-                    {overview}
-
-                    <h2>Tools</h2>
-                    <ul>{tools.map((item, i) => <li key={i}>{item}</li>)}</ul>
-
-                    <Button className={styles.detailButton} onClick={this.toggleModal}>See Detail</Button>
-                </div>
+                    <section className={styles.content}>
+                        <h1>{title}</h1>
+                        {overview}
+                    </section>
+                </button>
                 <Modal
                     isOpen={modalOpen}
                     contentLabel="Modal"
@@ -52,8 +55,7 @@ export default class WorkItem extends Component {
                     fullscreen={true}
                     backButton={true}
                 >
-                    <h1>{title}</h1>
-                    {body}
+                    <Detail {...detailProps} />
                 </Modal>
             </article>
         );

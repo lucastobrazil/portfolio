@@ -22,7 +22,7 @@ export default function Modal({ isOpen,
         },
         content: {
             width: fullscreen ? '100%' : '640px',
-            height: fullscreen ? '100%' : 'auto',
+            minHeight: fullscreen ? '100%' : 'auto',
         },
     };
     const modalProps = {

@@ -17,10 +17,8 @@ export default function Intro() {
         <p>
             Check out some highlights below:
           </p>
-        <ExperienceBubble />
-        <ExperienceBubble />
-        <ExperienceBubble />
-        <ExperienceBubble />
-        <ExperienceBubble />
+        <ExperienceBubble label="Ui Design and Development" href="#UiDev" />
+        <ExperienceBubble label="Leadership and Coordination" href="#leadership" />
+        <ExperienceBubble label="Web, Video and Print" href="#multimedia" />
     </Section>;
 }
