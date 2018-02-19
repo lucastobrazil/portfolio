@@ -1,13 +1,41 @@
-import React, { Fragment } from 'react';
+import React, { Component, Fragment } from 'react';
+import PropTypes from 'prop-types';
+// import { BrowserHistory } from "react-router";
+import { Link } from "react-router-dom";
 import styles from './style.less';
 import classNames from 'classnames';
-import ToolsIcon from '../../ToolsIcon';
-import ImageWithCaption from '../../ImageWithCaption';
+import ToolsIcon from '../ToolsIcon';
+import backIcon from './images/back_x.svg';
+import ImageWithCaption from '../ImageWithCaption';
 
-export default function Detail({ jobArt, jobDescription, jobOverview, tools, sections }) {
+class BackButton extends Component {
+    static contextTypes = {
+        router: PropTypes.object, // replace with PropTypes.object if you use them
+    }
+
+    render() {
+        return (
+            <button
+                className={this.props.className}
+                onClick={this.context.router.history.goBack}>
+                <img src={backIcon} alt="Close Modal" /> Back
+        </button>
+        )
+    }
+}
+
+export default function Page({ title, role, linkUrl, modalContent, history }) {
+    const { jobArt, jobDescription, jobOverview, tools, sections } = modalContent;
     const { team, tasks } = jobOverview;
     return (
-        <div>
+        <div className={styles.container}>
+            <header className={styles.header}>
+                <div className={styles.headerInner}>
+                    <BackButton className={styles.close} />
+                    <h1>My work: {title}</h1>
+                    <h2>{role}</h2>
+                </div>
+            </header>
             <Section>
                 <div className={styles.jobDetails}>
                     <div>
@@ -21,9 +49,9 @@ export default function Detail({ jobArt, jobDescription, jobOverview, tools, sec
                                 {tasks}
                             </Fragment>
                         }
-                        </div>
-                        <ImageWithCaption className={styles.jobArt} src={jobArt} />
                     </div>
+                    <ImageWithCaption className={styles.jobArt} src={jobArt} />
+                </div>
             </Section>
             {sections.map(s => <DetailBodySection {...s} />)}
             <Section altBg={true}>
