@@ -1,10 +1,11 @@
 import React, { Fragment } from 'react';
 import ImageWithCaption from '../../../components/ImageWithCaption';
 import chimpanzeePreview from './images/chimpanee-preview.jpg';
-import { ROLES } from '../../constants';
+import { ROLES, LINKS } from '../../constants';
 export default {
     title: 'Chimpanzee',
     role: ROLES.VIDEO_PRODUCTION,
+    linkUrl: LINKS.VID,
     modalContent: {
         cardArt: chimpanzeePreview,
         jobDescription: 'I love art projects - and luckily my musical project \'Arundel\' provides me with many opportunities to do them!',
@@ -24,7 +25,7 @@ export default {
                 title: 'Music Video',
                 altBg: true,
                 body:
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/ZGodcPuO7-Y?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ZGodcPuO7-Y?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             }
         ]
     }

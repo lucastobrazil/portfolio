@@ -2,10 +2,11 @@ import React, { Fragment } from 'react';
 import ImageWithCaption from '../../../components/ImageWithCaption';
 import nmvPrintPreview from './images/nmv-print-preview.jpg';
 import testImage from './images/si-activity-stream.png';
-import { ROLES } from '../../constants';
+import { ROLES, LINKS } from '../../constants';
 export default {
     title: 'Nightlife Music',
     role: ROLES.PRINT_ANIMATION,
+    linkUrl: LINKS.NMP,
     modalContent: {
         cardArt: nmvPrintPreview,
         jobDescription: 'Print Advertisements and Video Production',

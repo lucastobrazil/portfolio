@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import ImageWithCaption from '../../../components/ImageWithCaption';
-import { ROLES } from '../../constants';
+import { ROLES, LINKS } from '../../constants';
 
 import activityStream from './images/si-activity-stream.png';
 import meetingsImage from './images/si-meetingnote.png';
@@ -11,6 +11,7 @@ import siBeforeAfter from './images/siBeforeAfter.png';
 export default {
     title: 'Small Improvements',
     role: ROLES.UI_DEV,
+    linkUrl: LINKS.SI,
     modalContent: {
         cardArt: meetingsImage,
         jobDescription: 'Small Improvements is a feedback tool that allows companies to conduct 360º Feedback rounds, set Objectives, conduct 1:1 Meetings, give Praise / Kudos and  formal Performance Reviews.',
@@ -37,7 +38,7 @@ export default {
                             <li>Designed the UI of many content items</li>
                             <li>Created detailed specifications of how content would be aggregated and the different edge cases that can occur</li>
                         </ul>
-                      <ImageWithCaption src={activityStream} caption="A preview of some of the 'Content Items' shown in the activity stream." />
+                        <ImageWithCaption src={activityStream} caption="A preview of some of the 'Content Items' shown in the activity stream." />
                     </Fragment>
             },
             {
@@ -49,13 +50,13 @@ export default {
                             <li>The newest feature at Small Improvements, designed as a place to keep track of your 1:1 meetings.</li>
                             <li>Both participants can prepare an agenda (Talking Points) and afterwards add notes.</li>
                             <li>Designed UI for individual meetings, dashboard and meetings ‘space’ where users can see all of their meetings</li>
-                          </ul>
+                        </ul>
                         <ImageWithCaption src={meetingsImage} caption="A 1:1 Meeting in Small Improvements." />
                     </Fragment>
             },
             {
                 title: 'Living Style Guide',
-                altBg : true,
+                altBg: true,
                 body:
                     <Fragment>
                         <ul>
@@ -75,7 +76,7 @@ export default {
                             <li>We took this opportunity to rethink and refactor a lot of the code to follow a consistent pattern and structure.</li>
                             <li>This  also meant an opportunity to update the style of many components (well, basically all of them!)</li>
                         </ul>
-                        <img src={siBeforeAfter} style={{maxWidth: '100%'}} />
+                        <img src={siBeforeAfter} style={{ maxWidth: '100%' }} />
                     </div>
             },
         ]

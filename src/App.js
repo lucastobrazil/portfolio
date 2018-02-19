@@ -7,6 +7,7 @@ import Leadership from './sections/Leadership';
 import AboutMe from './sections/AboutMe';
 import Footer from './sections/Footer';
 
+import { LINKS } from './sections/constants';
 
 class App extends Component {
   render() {
@@ -14,7 +15,14 @@ class App extends Component {
       <Router>
         <div>
           <Route exact path="/" component={Home} />
-          <Route path="/small-improvements" component={About} />
+          <Route path={`/${LINKS.SI}`} component={About} />
+          <Route path={`/${LINKS.MMN}`} component={About} />
+          <Route path={`/${LINKS.HHR}`} component={About} />
+          <Route path={`/${LINKS.NM}`} component={About} />
+          <Route path={`/${LINKS.NMP}`} component={About} />
+          <Route path={`/${LINKS.PAN}`} component={About} />
+          <Route path={`/${LINKS.VID}`} component={About} />
+          <Route path={`/${LINKS.ACMS}`} component={About} />
         </div>
       </Router>
     );

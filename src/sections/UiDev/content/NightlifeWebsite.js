@@ -2,10 +2,11 @@ import React, { Fragment } from 'react';
 import ImageWithCaption from '../../../components/ImageWithCaption';
 import nightlifePreview from './images/nightlife-preview.jpg';
 import nmWebsiteBlocks from './images/nm-website-blocks.jpg';
-import { ROLES } from '../../constants';
+import { ROLES, LINKS } from '../../constants';
 export default {
     title: 'Nightlife Music',
     role: ROLES.WEB_DESIGN,
+    linkUrl: LINKS.NM,
     modalContent: {
         cardArt: nightlifePreview,
         jobDescription: 'Corporate website for Nightlife Music',

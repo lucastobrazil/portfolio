@@ -4,10 +4,12 @@ import mmnAdvertising from './images/mmn-screen.jpg';
 import mmnHome from './images/mmn-home.png';
 import mmnJobArt from './images/mmn-jobArt.png';
 
-import { ROLES } from '../../constants';
+import { ROLES, LINKS } from '../../constants';
+
 export default {
     title: 'Manage My Nightlife',
     role: ROLES.UI_DEV,
+    linkUrl: LINKS.MMN,
     modalContent: {
         cardArt: mmnHome,
         jobArt: mmnJobArt,
@@ -28,13 +30,13 @@ export default {
                 title: 'App Design and Style',
                 altBg: true,
                 body:
-                <Fragment>
-                    <p>Working with with three back-end developers, I created the UI across all
-                    platforms, as well as getting ‘hands on’ in the code. After release, I made
-                    improvements to the UX ongoing as we discovered how users were
+                    <Fragment>
+                        <p>Working with with three back-end developers, I created the UI across all
+                        platforms, as well as getting ‘hands on’ in the code. After release, I made
+                        improvements to the UX ongoing as we discovered how users were
                 interacting with the  app via user feedback.</p>
-                    <ImageWithCaption src={mmnHome} caption="ManageMyNightlife - song view sceren" />
-                </Fragment>
+                        <ImageWithCaption src={mmnHome} caption="ManageMyNightlife - song view sceren" />
+                    </Fragment>
             }, {
                 title: 'Feature: Advertising Platform',
                 altBg: false,

@@ -11,3 +11,14 @@ export const SECTIONS = {
     LEADERSHIP: 'Leadership and Coordination',
     ABOUT: 'About Me'
 };
+
+export const LINKS = {
+    SI: 'small-improvements',
+    MMN: 'manage-my-nightlife',
+    HHR: 'heaven-hr',
+    NM: 'nightlife-music',
+    NMP: 'nightlife-music-print',
+    PAN: 'print-animation',
+    VID: 'video-production',
+    ACMS: 'anchorman-cms',
+};

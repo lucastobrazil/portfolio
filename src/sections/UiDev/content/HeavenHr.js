@@ -2,11 +2,12 @@ import React, { Fragment } from 'react';
 import ImageWithCaption from '../../../components/ImageWithCaption';
 import hhrPreview from './images/hhr-preview.jpg';
 import vacationScreen from './images/heavenhr-vacation.png';
-import { ROLES } from '../../constants';
+import { ROLES, LINKS } from '../../constants';
 
 export default {
     title: 'HeavenHR',
     role: ROLES.FE_DEV,
+    linkUrl: LINKS.HHR,
     modalContent: {
         cardArt: hhrPreview,
         jobDescription: 'HeavenHR is an online HR tool to manage employee data, insurance, vacation requests and time tracking for freelancers.',

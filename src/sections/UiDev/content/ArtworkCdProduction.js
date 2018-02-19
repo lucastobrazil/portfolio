@@ -1,10 +1,11 @@
 import React, { Fragment } from 'react';
 import ImageWithCaption from '../../../components/ImageWithCaption';
 import channelsPreview from './images/channels-preview.jpg';
-import { ROLES } from '../../constants';
+import { ROLES, LINKS } from '../../constants';
 export default {
     title: 'Arundel',
     role: ROLES.PRINT_ANIMATION,
+    linkUrl: LINKS.PAN,
     modalContent: {
         cardArt: channelsPreview,
         jobDescription: 'I love art projects - and luckily my musical project \'Arundel\' provides me with many opportunities to do them!',
