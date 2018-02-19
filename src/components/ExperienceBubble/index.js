@@ -2,6 +2,7 @@ import styles from './style.less';
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import bgImage from '../../bg.svg';
 
 ExperienceBubble.propTypes = {
     label: PropTypes.string,
@@ -14,7 +15,7 @@ ExperienceBubble.defaultProps = {
 
 export default function ExperienceBubble({ className, imageUrl, label, onClick, href }) {
     return <a className={classNames(className, styles.container)} href={href}>
-        <img src={imageUrl} className={styles.image} alt={`Experience - ${label}`} />
+        <img src={imageUrl || bgImage} className={styles.image} alt={`Experience - ${label}`} />
         <span className={styles.label}>{label}</span>
     </a>;
 }

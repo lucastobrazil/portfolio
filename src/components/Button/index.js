@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import styles from './style.less';
 
 Button.propTypes = {
@@ -11,6 +12,6 @@ Button.defaultProps = {
     inverse: false
 };
 
-export default function Button({ onClick, children, inverse }) {
-    return <button className={`${styles.container} ${inverse && styles.inverse}`} onClick={onClick}>{children}</button>;
+export default function Button({ onClick, children, inverse, className }) {
+    return <button className={classNames(className, styles.container, { [styles.inverse]: inverse })} onClick={onClick}>{children}</button>;
 }

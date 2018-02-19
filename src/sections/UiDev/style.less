@@ -8,9 +8,11 @@
 .workItemGrid {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: @basePadding;
 
     .widthMin(XS, {
-        margin: 0 -@itemSpacing;
+        margin-left: -@itemSpacing;
+        margin-right: -@itemSpacing;
     });
 
     article {

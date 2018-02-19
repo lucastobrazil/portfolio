@@ -4,11 +4,21 @@ body {
   margin: 0;
   padding: 0;
   font-family: @fontFamilySerif;
-  font-size: @baseFontSize;
+  font-size: @fontSize;
   color: @black;
 }
 
-p {
+p, ul {
   line-height: 1.75;
   letter-spacing: -.003em;
+}
+
+
+h1, h2, h3 {
+  line-height: 1.5;
+  font-weight: @fontWeightBold;
+}
+
+h1 {
+  font-size: @fontSizeL;
 }

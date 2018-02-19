@@ -1,6 +1,6 @@
 @import '../../styles/vars.less';
 @workItemPadding: (@basePadding / 3);
-@height: 200px;
+@height: 180px;
 
 .inner {
     position: relative;
@@ -11,45 +11,50 @@
     flex-direction: column;
     height: @height;
     width: 100%;
-    box-shadow: 0 2px 3px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 3px rgba(0,0,0,0.2);
     background: @white;
     font-size: inherit;
+    border: none;
+    border-radius: @borderRadius * 2;
+    overflow: hidden;
+    transition: box-shadow 150ms ease, transform 150ms ease;
 
-    .cover {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: @darkColor;
-        opacity: 0;
-        z-index: 2;
-    }
-
-    &:hover {
-        .cover {
-            opacity: .6;
-        }
+    &:hover, &:active, &:focus {
+        transform: perspective(500px) translate3d(0, 0, 10px);
         cursor: pointer;
+        box-shadow: 0 3px 5px rgba(0,0,0,0.3);
     }
 }
 
-.header {
+.image {
     display: flex;
     align-items: center;
     width: 100%;
     height: @height;
     width: 100%;
+    // opacity: 0.5;
     background-size: cover;
-    opacity: 0.5;
 }
 
 .content {
     padding: @workItemPadding;
     position: absolute;
     bottom: 0;
+    font-size: @fontSizeS;
+    background: @primaryColor;
+    color: white;
+    width: calc(100% - 20px);
+
     h1 {
+        font-size: @fontSize;
         font-family: @fontFamilySansSerif;
         margin: @workItemPadding;
         z-index: 2;
         margin: 0;
     }
+}
+
+.homeButton {
+    display: block;
+    margin: @basePadding auto;
 }

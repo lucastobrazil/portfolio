@@ -14,6 +14,8 @@ export default function Modal({ isOpen,
     fullscreen,
     backButton,
     closeButton,
+    title,
+    subtitle,
 }) {
     ReactModal.setAppElement(document.body);
     const style = {
@@ -37,17 +39,25 @@ export default function Modal({ isOpen,
     };
     return (
         <ReactModal {...modalProps}>
-            {backButton &&
-                <button className={styles.close} onClick={onRequestClose}>
-                    <img src={backIcon} alt="Close Modal" /> Go Back
+            <section className={styles.header}>
+                <div className={styles.headerInner}>
+                    {backButton &&
+                        <button className={styles.close} onClick={onRequestClose}>
+                            <img src={backIcon} alt="Close Modal" /> Go Back
                 </button>
-            }
-            {closeButton &&
-                <button className={classNames(styles.close, styles.right)} onClick={onRequestClose}>
-                    <img src={closeIcon} alt="Close Modal" />
-                </button>
-            }
-            {children}
+                    }
+                    {closeButton &&
+                        <button className={classNames(styles.close, styles.right)} onClick={onRequestClose}>
+                            <img src={closeIcon} alt="Close Modal" />
+                        </button>
+                    }
+                    <h1>{title}</h1>
+                    <h2>{subtitle}</h2>
+                </div>
+            </section>
+            <div className={styles.innerContent}>
+                {children}
+            </div>
         </ReactModal>
     );
 }
