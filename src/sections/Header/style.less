@@ -1,4 +1,5 @@
 @import '../../styles/vars.less';
+@import '../../styles/responsive-mixins.less';
 
 .container {
     padding: @basePadding;
@@ -19,7 +20,9 @@
     position: relative;
     margin-top: (@basePadding * 2);
     margin-bottom: -@basePadding;
-
+    .widthMax(S, {
+        margin-top: 140px;
+    });
     .greeting,
     img {
         position: absolute;
@@ -36,4 +39,8 @@
         right: 0;
         top: -140px;
     }
+}
+
+.emoji {
+    font-size: 18px;
 }

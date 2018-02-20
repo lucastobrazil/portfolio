@@ -30,7 +30,7 @@ export default function Page({ title, role, linkUrl, modalContent, history }) {
             <header className={styles.header}>
                 <div className={styles.headerInner}>
                     <BackButton className={styles.close} />
-                    <h1>My work: {title}</h1>
+                    <h1>{title}</h1>
                     <h2>{role}</h2>
                 </div>
             </header>

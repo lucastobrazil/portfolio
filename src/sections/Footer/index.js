@@ -6,7 +6,7 @@ export default function Footer({ className, children }) {
     return <footer className={styles.container}>
         <Inner>
             <h1>Let's chat!</h1>
-            <p>Blah blah</p>
+            <a href="https://www.linkedin.com/in/lucasarundell/" target="_blank">LinkedIn</a>
         </Inner>
     </footer>;
 }

@@ -17,6 +17,10 @@
         flex-basis: 100%;
         padding-bottom: @itemSpacing;
 
+        .widthMax(S, {
+            padding-bottom: (@itemSpacing * 2);
+        });
+
         .widthMin(XS, {
             flex-shrink: 1;
             flex-basis: 45%;

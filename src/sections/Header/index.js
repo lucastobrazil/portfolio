@@ -11,7 +11,7 @@ export default function Header({ className, children }) {
             <Heading>I’m a UI Designer, Front End Developer and Design Team Coordinator.</Heading>
             <p className={styles.subHeading}>I like people, technology,  creative projects and building stuff.</p>
             <div className={styles.bubbleContainer}>
-                <span className={styles.greeting}><span role="img" aria-label="Waving emoji">👋</span> Hi there!</span>
+                <span className={styles.greeting}><span role="img" className={styles.emoji} aria-label="Waving emoji">👋</span> Hi there!</span>
                 <ProfileBubble />
             </div>
         </Inner>
