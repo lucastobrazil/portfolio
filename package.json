@@ -1,6 +1,7 @@
 {
   "name": "lucasarundell-portfolio",
   "version": "0.1.0",
+  "homepage": "https://lucastobrazil.github.io/portfolio/",
   "private": true,
   "dependencies": {
     "autoprefixer": "7.1.6",
@@ -28,6 +29,8 @@
     "fs-extra": "3.0.1",
     "html-webpack-plugin": "2.29.0",
     "jest": "20.0.4",
+    "less": "^3.0.1",
+    "less-loader": "^4.0.5",
     "object-assign": "4.1.1",
     "postcss-flexbugs-fixes": "3.2.0",
     "postcss-loader": "2.0.8",
@@ -51,7 +54,8 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom",
+    "deploy": "npm run build&&gh-pages -d build"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -96,7 +100,6 @@
     "extends": "react-app"
   },
   "devDependencies": {
-    "less": "^3.0.0",
-    "less-loader": "^4.0.5"
+    "gh-pages": "^1.1.0"
   }
 }
