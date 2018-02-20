@@ -108,7 +108,7 @@ export default {
                     title: 'Music Video',
                     altBg: true,
                     body:
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/ZGodcPuO7-Y?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
+                        <iframe title="Chimpanzee Music Video" width="560" height="315" src="https://www.youtube.com/embed/ZGodcPuO7-Y?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
                 }
             ]
         }
@@ -336,7 +336,7 @@ export default {
                                 <li>We took this opportunity to rethink and refactor a lot of the code to follow a consistent pattern and structure.</li>
                                 <li>This  also meant an opportunity to update the style of many components (well, basically all of them!)</li>
                             </ul>
-                            <img src={siBeforeAfter} style={{ maxWidth: '100%' }} />
+                            <img src={siBeforeAfter} style={{ maxWidth: '100%' }} alt="Small Improvements before and after"/>
                         </div>
                 },
             ]

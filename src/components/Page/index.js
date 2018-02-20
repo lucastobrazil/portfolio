@@ -1,7 +1,5 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
-// import { BrowserHistory } from "react-router";
-import { Link } from "react-router-dom";
 import styles from './style.less';
 import classNames from 'classnames';
 import ToolsIcon from '../ToolsIcon';

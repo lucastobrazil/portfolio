@@ -3,5 +3,5 @@ import React from 'react';
 import lucasPhoto from './lucas.jpg';
 
 export default function ProfileBubble() {
-    return <img src={lucasPhoto} className={styles.container} />;
+    return <img src={lucasPhoto} className={styles.container} alt="Lucas - in all his glory" />;
 }
