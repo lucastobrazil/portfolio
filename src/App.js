@@ -30,6 +30,7 @@ class App extends Component {
           <Nav />
           <ScrollMemory />
           <AppContent />
+          <Footer />
         </div>
       </Router>
     );
@@ -62,7 +63,6 @@ const Home = () => (
     {/* <UiDev /> */}
     {/* <Leadership /> */}
     {/* <AboutMe /> */}
-    <Footer />
   </Fragment>
 );
 

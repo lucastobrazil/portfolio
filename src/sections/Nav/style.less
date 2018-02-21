@@ -4,6 +4,7 @@
 .nav {
     position: fixed;
     width: 100%;
+    top: 0;
     // background-color: @white;
     color: @white;
     z-index: 3;
@@ -33,7 +34,15 @@
         }
     }
     a {
-        color: white;
+        color: fade(white, 80);
         text-decoration: none;
+        padding-bottom: 4px;
+        &:hover {
+            color: white;
+        }
+        &.active {
+            color: white;
+            border-bottom: 2px solid fade(white, 70);
+        }
     }
 }
