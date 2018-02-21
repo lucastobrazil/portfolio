@@ -1,6 +1,6 @@
 @import '../../styles/vars.less';
-@workItemPadding: (@basePadding / 3);
-@height: 180px;
+@workItemPadding: (@basePadding / 2);
+@height: 310px;
 
 .inner {
     position: relative;
@@ -11,7 +11,8 @@
     flex-direction: column;
     height: @height;
     width: 100%;
-    box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+    // box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+    box-shadow: @boxShadow;
     background: @white;
     font-size: inherit;
     border: none;
@@ -22,7 +23,8 @@
     &:hover, &:active, &:focus {
         transform: perspective(500px) translate3d(0, 0, 10px);
         cursor: pointer;
-        box-shadow: 0 3px 5px rgba(0,0,0,0.3);
+        // box-shadow: 0 3px 5px rgba(0,0,0,0.3);
+        box-shadow: 0 30px 30px rgba(0,0,0,.12);
     }
 }
 
@@ -41,17 +43,19 @@
     position: absolute;
     bottom: 0;
     font-size: @fontSizeS;
-    background: @primaryColor;
-    color: white;
+    background: @white;
+    color: @lightGrey;
     width: calc(100% - 20px);
     &, h1 {
         font-family: @fontFamilySansSerif;
     }
     h1 {
         font-size: @fontSize;
+        font-weight: 500;
         margin: @workItemPadding;
         z-index: 2;
         margin: 0;
+        color: @offBlack;
     }
 }
 

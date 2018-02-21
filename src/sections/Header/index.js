@@ -7,7 +7,6 @@ import styles from './style.less';
 export default function Header({ className, children }) {
     return <header className={styles.header}>
         <Inner className={styles.container}>
-            <p>Lucas Arundell</p>
             <Heading>I’m a UI Designer, Front End Developer and Design Team Coordinator.</Heading>
             <p className={styles.subHeading}>I like people, technology,  creative projects and building stuff.</p>
             <div className={styles.bubbleContainer}>

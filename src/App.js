@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import ScrollMemory from 'react-router-scroll-memory';
 
+import Nav from './sections/Nav';
 import Header from './sections/Header';
 import Intro from './sections/Intro';
 import UiDev from './sections/UiDev';
@@ -26,6 +27,7 @@ class App extends Component {
     return (
       <Router basename={process.env.PUBLIC_URL}>
         <div>
+          <Nav />
           <ScrollMemory />
           <AppContent />
         </div>
@@ -45,16 +47,21 @@ const AppContent = () => (
     <Route exact path={`/${LINKS.PAN}`} component={PrintAnimationPage} />
     <Route exact path={`/${LINKS.VID}`} component={VideoProductionPage} />
     <Route exact path={`/${LINKS.ACMS}`} component={AnchormanPage} />
+
+    <Route exact path={`/${LINKS.DESIGN}`} component={UiDev} />
+    <Route exact path={`/${LINKS.LEADERSHIP}`} component={Leadership} />
+    <Route exact path={`/${LINKS.ABOUT}`} component={AboutMe} />
   </Switch>
 );
 
 const Home = () => (
   <Fragment>
+
     <Header />
-    <Intro />
-    <UiDev />
-    <Leadership />
-    <AboutMe />
+    {/* <Intro /> */}
+    {/* <UiDev /> */}
+    {/* <Leadership /> */}
+    {/* <AboutMe /> */}
     <Footer />
   </Fragment>
 );

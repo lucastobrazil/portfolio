@@ -19,7 +19,7 @@ export default function WorkItemMini({ title, description, linkLabel, linkUrl })
     return <article className={styles.container}>
         <div className={styles.inner}>
             <h1>{title}</h1>
-            <LinkButton inverse={true} href={linkUrl} target="_blank">{linkLabel}</LinkButton>
+            <LinkButton inverse={true} href={linkUrl} rel="noopener noreferrer" target="_blank">{linkLabel}</LinkButton>
         </div>
         <p>{description}</p>
     </article>;

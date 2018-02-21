@@ -13,7 +13,9 @@ export const SECTIONS = {
 };
 
 export const LINKS = {
-    SI: 'small-improvements',
+    DESIGN: 'design',
+    LEADERSHIP: 'leadership',
+    ABOUT: 'about',
     MMN: 'manage-my-nightlife',
     HHR: 'heaven-hr',
     NM: 'nightlife-music',

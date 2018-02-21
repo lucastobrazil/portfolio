@@ -1,12 +1,14 @@
 @import '../../../styles/vars.less';
 
 .container {
-    max-width: 640px;
+    max-width: @homePageMaxWidth;
     padding: @sectionPadding;
+    padding-top: 100px;
     margin: 0 auto;
 
     h1, h2 {
         font-family: @fontFamilySansSerif;
+        color: @offBlack;
     }
 
     h1 {

@@ -53,7 +53,7 @@ export default function Page({ title, role, linkUrl, modalContent, history }) {
             </Section>
             {sections.map(s => <DetailBodySection {...s} />)}
             <Section altBg={true}>
-                <h2>Tools</h2>
+                <h2 className={styles.toolsHeader}>Tools</h2>
                 {tools.map(i => <ToolsIcon icon={i} />)}
             </Section>
         </div>

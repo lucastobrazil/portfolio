@@ -45,9 +45,17 @@
         margin-bottom: 0;
         color: @primaryColor;
 
+        &:not(:first-child) {
+            margin-top: @basePadding;
+        }
+
         & + p,
         & + ul, {
             margin-top: (@basePadding / 3);
+        }
+
+        &.toolsHeader {
+            margin-bottom: (@basePadding);
         }
     }
 
