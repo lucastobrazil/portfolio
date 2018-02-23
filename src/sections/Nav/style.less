@@ -1,17 +1,16 @@
 @import '../../styles/vars.less';
 @import '../../styles/responsive-mixins.less';
-
+@backgroundColor: @white;
+@foregroundColor: @primaryColor;
 .nav {
     position: fixed;
     width: 100%;
     top: 0;
-    // background-color: @white;
-    color: @white;
+    color: @foregroundColor;
     z-index: 3;
     box-shadow: @boxShadow;
-    border-top: 4px solid @primaryColor;
-    background: @primaryColor;
-    box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 40px;
+    border-top: 4px solid @foregroundColor;
+    background: @backgroundColor;
 
     .inner {
         width: 100%;
@@ -34,15 +33,19 @@
         }
     }
     a {
-        color: fade(white, 80);
+        color: @foregroundColor;
         text-decoration: none;
         padding-bottom: 4px;
         &:hover {
-            color: white;
+            color: lighten(@foregroundColor, 10);
         }
         &.active {
-            color: white;
-            border-bottom: 2px solid fade(white, 70);
+            color: @foregroundColor;
+            border-bottom: 2px solid fade(@foregroundColor, 70);
         }
     }
+}
+
+.brand a {
+    color: @black;
 }

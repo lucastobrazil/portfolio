@@ -27,14 +27,14 @@ export default function Page({ title, role, linkUrl, modalContent, history }) {
     const { team, tasks } = jobOverview;
     return (
         <div className={styles.container}>
-            <header className={styles.header}>
+            {/* <header className={styles.header}>
                 <div className={styles.headerInner}>
-                    <BackButton className={styles.close} />
-                    <h1>{title}</h1>
-                    <h2>{role}</h2>
                 </div>
-            </header>
+            </header> */}
             <Section>
+                <BackButton className={styles.close} />
+                <h1>{title}</h1>
+                <h2>{role}</h2>
                 <div className={styles.jobDetails}>
                     <div>
                         <h2>Team:</h2>
