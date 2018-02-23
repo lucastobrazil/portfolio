@@ -4,5 +4,9 @@ import './index.less';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
+if (module.hot) {
+    module.hot.accept();
+}
+
 ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();
