@@ -8,6 +8,7 @@ const AnchormanPage = () => <WorkItemDetail {...CONTENT.ACMS} />;
 const PrintAnimationPage = () => <WorkItemDetail {...CONTENT.PAN} />;
 const SiPage = () => <WorkItemDetail {...CONTENT.SI} />;
 const MmnPage = () => <WorkItemDetail {...CONTENT.MMN} />;
+const CddjPage = () => <WorkItemDetail {...CONTENT.CDDJ} />;
 const HhrPage = () => <WorkItemDetail {...CONTENT.HHR} />;
 const NmPage = () => <WorkItemDetail {...CONTENT.NM} />;
 const NmpPage = () => <WorkItemDetail {...CONTENT.NMP} />;
@@ -18,6 +19,7 @@ export {
     PrintAnimationPage,
     SiPage,
     MmnPage,
+    CddjPage,
     HhrPage,
     NmPage,
     NmpPage,
@@ -26,11 +28,12 @@ export {
 
 export const workItems = [
     <WorkItem {...CONTENT.SI} />,
+    <WorkItem {...CONTENT.CDDJ} />,
     <WorkItem {...CONTENT.MMN} />,
     <WorkItem {...CONTENT.HHR} />,
     <WorkItem {...CONTENT.NM} />,
     <WorkItem {...CONTENT.PAN} />,
     <WorkItem {...CONTENT.NMP} />,
     <WorkItem {...CONTENT.VID} />,
-    <WorkItem {...CONTENT.ACMS} />,
+    // <WorkItem {...CONTENT.ACMS} />,
 ];

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Section from '../../components/Section';
 import WorkItemMini from '../../components/WorkItemMini';
 import styles from './style.less';
@@ -31,7 +31,7 @@ export default function DesignDev() {
     return <Section altBg={true}>
         <h1>{SECTIONS.DESIGN_DEV}</h1>
         <div className={styles.workItemGrid}>
-            {workItems.map(item => item)}
+            {workItems.map((item, i) => <Fragment key={i}>{item}</Fragment>)}
         </div>
 
         <h2>Some other development projects:</h2>

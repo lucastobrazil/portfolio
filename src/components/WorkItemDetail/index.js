@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import styles from './style.less';
-import classNames from 'classnames';
 import ToolsIcon from '../ToolsIcon';
 import backIcon from './images/back_x.svg';
 import ImageWithCaption from '../ImageWithCaption';

@@ -11,6 +11,8 @@ import vacationScreen from './images/heavenhr-vacation.png';
 import mmnAdvertising from './images/mmn-screen.jpg';
 import mmnHome from './images/mmn-home.png';
 import mmnJobArt from './images/mmn-jobArt.png';
+import mmnPreview from './images/mmn-preview.png';
+import cddjPreview from './images/cddj-preview.png';
 import nmvPrintPreview from './images/nmv-print-preview.jpg';
 import nightlifePreview from './images/nightlife-preview.jpg';
 import nmWebsiteBlocks from './images/nm-website-blocks.jpg';
@@ -25,8 +27,10 @@ export default {
         title: 'Anchorman News CMS',
         role: ROLES.FE_DEV,
         linkUrl: LINKS.ACMS,
+        style: {
+            backgroundImage: `url(${anchormanPreview})`,
+        },
         modalContent: {
-            cardArt: anchormanPreview,
             jobDescription: 'I designed a complete system to manage the content of a Live News feed. The client needed a quick way to create, manage and deploy content on the go.',
             jobOverview: {
                 team: 'Flying solo.',
@@ -55,8 +59,10 @@ export default {
         title: 'Arundel',
         role: ROLES.PRINT_ANIMATION,
         linkUrl: LINKS.PAN,
+        style: {
+            backgroundImage: `url(${channelsPreview})`,
+        },
         modalContent: {
-            cardArt: channelsPreview,
             jobDescription: 'I love art projects - and luckily my musical project \'Arundel\' provides me with many opportunities to do them!',
             jobOverview: {
                 team: 'Flying solo, sometimes with collaborators',
@@ -90,8 +96,10 @@ export default {
         title: 'Chimpanzee',
         role: ROLES.VIDEO_PRODUCTION,
         linkUrl: LINKS.VID,
+        style: {
+            backgroundImage: `url(${chimpanzeePreview})`,
+        },
         modalContent: {
-            cardArt: chimpanzeePreview,
             jobDescription: 'I love art projects - and luckily my musical project \'Arundel\' provides me with many opportunities to do them!',
             jobOverview: {
                 team: 'Talented crew(s) in Brisbane, Australia',
@@ -118,8 +126,13 @@ export default {
         title: 'HeavenHR',
         role: ROLES.FE_DEV,
         linkUrl: LINKS.HHR,
+        style: {
+            backgroundSize: '250px',
+            backgroundColor: '#6698CC',
+            backgroundPositionY: 'bottom',
+            backgroundImage: `url(${hhrPreview})`,
+        },
         modalContent: {
-            cardArt: hhrPreview,
             jobDescription: 'HeavenHR is an online HR tool to manage employee data, insurance, vacation requests and time tracking for freelancers.',
             jobOverview: {
                 team: 'I was hired as the first Senior Front End developer at HeavenHR and worked with about twenty back-end developers. We had a dedicated web designer and product managers often presented wireframes directly to me.',
@@ -157,12 +170,40 @@ export default {
             ]
         }
     },
+    CDDJ: {
+        title: 'CrowdDJ',
+        role: ROLES.UI_DEV,
+        linkUrl: LINKS.CDDJ,
+        style: {
+            backgroundColor: '#36CF75',
+            backgroundImage: `url(${cddjPreview})`,
+        },
+        modalContent: {
+            jobArt: mmnJobArt,
+            jobDescription: 'Manage My Nightlife - an app designed across Web, iOS and Android platforms for users of a Music Video playback system. The system outputs music videos onto the TV screens inside a venue.',
+            jobOverview: {
+                team: 'I worked as designer and front end developer alongside a team of 5 other full-stack developers.',
+                tasks:
+                    <ul>
+                        <li>UI &amp; UX design and development - all platforms</li>
+                        <li>Colour pallette to rollout across all platforms</li>
+                        <li>Colour functions coded to  aid in user feedback and interactivity</li>
+                        <li>Custom icon sets</li>
+                    </ul>
+            },
+            tools: ['less', 'illustrator', 'photoshop', 'knockout'],
+            section: []
+        }
+    },
     MMN: {
         title: 'Manage My Nightlife',
         role: ROLES.UI_DEV,
         linkUrl: LINKS.MMN,
+        style: {
+            backgroundColor: '#36CF75',
+            backgroundImage: `url(${mmnPreview})`,
+        },
         modalContent: {
-            cardArt: mmnHome,
             jobArt: mmnJobArt,
             jobDescription: 'Manage My Nightlife - an app designed across Web, iOS and Android platforms for users of a Music Video playback system. The system outputs music videos onto the TV screens inside a venue.',
             jobOverview: {
@@ -208,8 +249,11 @@ export default {
         title: 'Nightlife Music',
         role: ROLES.PRINT_ANIMATION,
         linkUrl: LINKS.NMP,
+        style: {
+            backgroundColor: '#36CF75',
+            backgroundImage: `url(${nmvPrintPreview})`,
+        },
         modalContent: {
-            cardArt: nmvPrintPreview,
             jobDescription: 'Print Advertisements and Video Production',
             jobOverview: {
                 team: 'Working alongside the Marketing department, I designed the graphics for many advertising campaigns - mostly for industry magazines. ',
@@ -239,8 +283,11 @@ export default {
         title: 'Nightlife Music',
         role: ROLES.WEB_DESIGN,
         linkUrl: LINKS.NM,
+        style: {
+            backgroundColor: '#36CF75',
+            backgroundImage: `url(${nightlifePreview})`,
+        },
         modalContent: {
-            cardArt: nightlifePreview,
             jobDescription: 'Corporate website for Nightlife Music',
             jobOverview: {
                 team: 'Working in the Marketing team, I was joined by a copy writer and our marketing manager.',
@@ -273,8 +320,12 @@ export default {
         title: 'Small Improvements',
         role: ROLES.UI_DEV,
         linkUrl: LINKS.SI,
+        style: {
+            backgroundSize: '270px',
+            backgroundColor: '#FFDB4D',
+            backgroundImage: `url(${siPreview})`,
+        },
         modalContent: {
-            cardArt: siPreview,
             jobDescription: 'Small Improvements is a feedback tool that allows companies to conduct 360º Feedback rounds, set Objectives, conduct 1:1 Meetings, give Praise / Kudos and  formal Performance Reviews.',
             jobOverview: {
                 team: 'Working in a cross-functional team consisting of one designer and two full-stack developers. Across teams, all designers meet as a ‘meta team’ - my role also includes being the Design Coordinator.',
@@ -338,7 +389,7 @@ export default {
                                     <li>We took this opportunity to rethink and refactor a lot of the code to follow a consistent pattern and structure.</li>
                                     <li>This  also meant an opportunity to update the style of many components (well, basically all of them!)</li>
                                 </ul>
-                                <iframe src="https://player.vimeo.com/video/180569819?color=4777ff&title=0&byline=0&portrait=0" width="470" height="264" frameborder="0" webkitallowfullscreen mozallowfullscreen allowFullScreen></iframe>
+                                <iframe title="Video of me at Small Improvements" src="https://player.vimeo.com/video/180569819?color=4777ff&title=0&byline=0&portrait=0" width="470" height="264" frameborder="0" webkitallowfullscreen mozallowfullscreen allowFullScreen></iframe>
                             </div>
                             <img src={siBeforeAfter} style={{ maxWidth: '100%' }} alt="Small Improvements before and after" />
                         </div>

@@ -15,11 +15,11 @@ const defaultProps = {
     tools: []
 };
 
-export default function WorkItem({ title, role, modalContent, linkUrl }) {
+export default function WorkItem({ title, role, modalContent, linkUrl, style }) {
     return (
-        <article button className={styles.container}>
+        <article className={styles.container}>
             <Link className={styles.inner} to={`/${linkUrl}`}>
-                <header className={styles.image} style={{ backgroundImage: `url(${modalContent.cardArt})` }}>
+                <header className={styles.image} style={{ ...style }} >
                 </header>
                 <section className={styles.content}>
                     <h1>{title}</h1>
