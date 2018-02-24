@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import ScrollMemory from 'react-router-scroll-memory';
 
 import Nav from './sections/Nav';
-import Header from './sections/Header';
+import Home from './sections/Home';
 import Intro from './sections/Intro';
 import UiDev from './sections/UiDev';
 import Leadership from './sections/Leadership';
@@ -39,7 +39,7 @@ class App extends Component {
 
 const AppContent = () => (
   <Switch>
-    <Route exact path="/" component={Header} />
+    <Route exact path="/" component={Home} />
     <Route exact path={`/${LINKS.SI}`} component={SiPage} />
     <Route exact path={`/${LINKS.MMN}`} component={MmnPage} />
     <Route exact path={`/${LINKS.HHR}`} component={HhrPage} />
