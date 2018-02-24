@@ -1,16 +1,14 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import ScrollMemory from 'react-router-scroll-memory';
 
-import Nav from './sections/Nav';
-import Home from './sections/Home';
-import Intro from './sections/Intro';
-import UiDev from './sections/UiDev';
-import Leadership from './sections/Leadership';
-import AboutMe from './sections/AboutMe';
-import Footer from './sections/Footer';
+import Nav from './pages/Nav';
+import Home from './pages/Home';
+import UiDev from './pages/UiDev';
+import Leadership from './pages/Leadership';
+import AboutMe from './pages/AboutMe';
+import Footer from './pages/Footer';
 
-import { LINKS } from './sections/constants';
+import { LINKS } from './pages/constants';
 import {
   AnchormanPage,
   PrintAnimationPage,

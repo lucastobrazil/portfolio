@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import anchormanPreview from './images/anchorman-preview.jpg';
 import anchormanScreen from './images/anchorman-cms.jpg';
-import { ROLES, LINKS } from '../../sections/constants';
+import { ROLES, LINKS } from '../../pages/constants';
 
 import channelsPreview from './images/channels-preview.jpg';
 import chimpanzeePreview from './images/chimpanee-preview.jpg';
