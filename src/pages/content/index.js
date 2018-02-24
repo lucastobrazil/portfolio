@@ -25,12 +25,12 @@ export {
 };
 
 export const workItems = [
-    <WorkItem {...CONTENT.ACMS} />,
-    <WorkItem {...CONTENT.PAN} />,
     <WorkItem {...CONTENT.SI} />,
     <WorkItem {...CONTENT.MMN} />,
     <WorkItem {...CONTENT.HHR} />,
     <WorkItem {...CONTENT.NM} />,
+    <WorkItem {...CONTENT.PAN} />,
     <WorkItem {...CONTENT.NMP} />,
     <WorkItem {...CONTENT.VID} />,
-]
+    <WorkItem {...CONTENT.ACMS} />,
+];

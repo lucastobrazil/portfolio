@@ -4,5 +4,5 @@ import classNames from 'classnames';
 import styles from './style.less';
 
 export default function Section({ className, children, name, altBg }) {
-    return <section className={classNames(className, {[styles.altBg]: altBg})}><Inner><a name={name} aria-hidden="true" />{children}</Inner></section>;
+    return <section id={name} className={classNames(className, { [styles.altBg]: altBg })}><Inner>{children}</Inner></section>;
 }

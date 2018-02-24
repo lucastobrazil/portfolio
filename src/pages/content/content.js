@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import anchormanPreview from './images/anchorman-preview.jpg';
 import anchormanScreen from './images/anchorman-cms.jpg';
-import { ROLES, LINKS } from '../../sections/constants';
+import { ROLES, LINKS } from '../../pages/constants';
 
 import channelsPreview from './images/channels-preview.jpg';
 import chimpanzeePreview from './images/chimpanee-preview.jpg';
@@ -16,6 +16,7 @@ import nightlifePreview from './images/nightlife-preview.jpg';
 import nmWebsiteBlocks from './images/nm-website-blocks.jpg';
 import activityStream from './images/si-activity-stream.png';
 import meetingsImage from './images/si-meetingnote.png';
+import siPreview from './images/si-preview.png';
 import styleGuide from './images/si-styleguide.png';
 import siBeforeAfter from './images/siBeforeAfter.png';
 
@@ -184,7 +185,7 @@ export default {
                             <p>Working with with three back-end developers, I created the UI across all
                             platforms, as well as getting ‘hands on’ in the code. After release, I made
                             improvements to the UX ongoing as we discovered how users were
-                    interacting with the  app via user feedback.</p>
+                            interacting with the  app via user feedback.</p>
                             <ImageWithCaption src={mmnHome} caption="ManageMyNightlife - song view sceren" />
                         </Fragment>
                 }, {
@@ -273,7 +274,7 @@ export default {
         role: ROLES.UI_DEV,
         linkUrl: LINKS.SI,
         modalContent: {
-            cardArt: meetingsImage,
+            cardArt: siPreview,
             jobDescription: 'Small Improvements is a feedback tool that allows companies to conduct 360º Feedback rounds, set Objectives, conduct 1:1 Meetings, give Praise / Kudos and  formal Performance Reviews.',
             jobOverview: {
                 team: 'Working in a cross-functional team consisting of one designer and two full-stack developers. Across teams, all designers meet as a ‘meta team’ - my role also includes being the Design Coordinator.',
@@ -331,12 +332,15 @@ export default {
                     title: 'Responsive overhaul and style updates',
                     body:
                         <div>
-                            <ul>
-                                <li>When I joined, we were in the process of converting the SI app to be mobile-responsive. </li>
-                                <li>We took this opportunity to rethink and refactor a lot of the code to follow a consistent pattern and structure.</li>
-                                <li>This  also meant an opportunity to update the style of many components (well, basically all of them!)</li>
-                            </ul>
-                            <img src={siBeforeAfter} style={{ maxWidth: '100%' }} alt="Small Improvements before and after"/>
+                            <div style={{ display: 'flex' }}>
+                                <ul>
+                                    <li>When I joined, we were in the process of converting the SI app to be mobile-responsive. </li>
+                                    <li>We took this opportunity to rethink and refactor a lot of the code to follow a consistent pattern and structure.</li>
+                                    <li>This  also meant an opportunity to update the style of many components (well, basically all of them!)</li>
+                                </ul>
+                                <iframe src="https://player.vimeo.com/video/180569819?color=4777ff&title=0&byline=0&portrait=0" width="470" height="264" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                            </div>
+                            <img src={siBeforeAfter} style={{ maxWidth: '100%' }} alt="Small Improvements before and after" />
                         </div>
                 },
             ]

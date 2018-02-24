@@ -1,15 +1,14 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import ScrollMemory from 'react-router-scroll-memory';
 
-import Header from './sections/Header';
-import Intro from './sections/Intro';
-import UiDev from './sections/UiDev';
-import Leadership from './sections/Leadership';
-import AboutMe from './sections/AboutMe';
-import Footer from './sections/Footer';
+import Nav from './pages/Nav';
+import Home from './pages/Home';
+import UiDev from './pages/UiDev';
+import Leadership from './pages/Leadership';
+import AboutMe from './pages/AboutMe';
+import Footer from './pages/Footer';
 
-import { LINKS } from './sections/constants';
+import { LINKS } from './pages/constants';
 import {
   AnchormanPage,
   PrintAnimationPage,
@@ -25,10 +24,12 @@ class App extends Component {
   render() {
     return (
       <Router basename={process.env.PUBLIC_URL}>
-        <div>
-          <ScrollMemory />
+        <main>
+          <Nav />
+          {/* <ScrollMemory /> */}
           <AppContent />
-        </div>
+          <Footer />
+        </main>
       </Router>
     );
   }
@@ -45,18 +46,11 @@ const AppContent = () => (
     <Route exact path={`/${LINKS.PAN}`} component={PrintAnimationPage} />
     <Route exact path={`/${LINKS.VID}`} component={VideoProductionPage} />
     <Route exact path={`/${LINKS.ACMS}`} component={AnchormanPage} />
-  </Switch>
-);
 
-const Home = () => (
-  <Fragment>
-    <Header />
-    <Intro />
-    <UiDev />
-    <Leadership />
-    <AboutMe />
-    <Footer />
-  </Fragment>
+    <Route exact path={`/${LINKS.DESIGN}`} component={UiDev} />
+    <Route exact path={`/${LINKS.LEADERSHIP}`} component={Leadership} />
+    <Route exact path={`/${LINKS.ABOUT}`} component={AboutMe} />
+  </Switch>
 );
 
 export default App;

@@ -1,7 +1,7 @@
 @import '../../styles/vars.less';
 @import '../../styles/responsive-mixins.less';
 
-@itemSpacing: (@basePadding / 3);
+@itemSpacing: (@basePadding / 2);
 
 .workItemGrid {
     display: flex;
@@ -23,7 +23,8 @@
 
         .widthMin(XS, {
             flex-shrink: 1;
-            flex-basis: 45%;
+            // flex-basis: 45%;
+            flex-basis: 290px;
             padding: @itemSpacing;
         });
 

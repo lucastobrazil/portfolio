@@ -1,0 +1,51 @@
+@import '../../styles/vars.less';
+@import '../../styles/responsive-mixins.less';
+@backgroundColor: @white;
+@foregroundColor: @primaryColor;
+.nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    color: @foregroundColor;
+    z-index: 3;
+    box-shadow: @boxShadow;
+    border-top: 4px solid @foregroundColor;
+    background: @backgroundColor;
+
+    .inner {
+        width: 100%;
+        max-width: @homePageMaxWidth;
+        margin: 0 auto;
+        padding: (@basePadding / 3) 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    ul {
+        list-style-type: none;
+        display: inline-flex;
+        font-size: @fontSizeS;
+        font-family: @fontFamilySansSerif;
+
+        li:not(:last-child) {
+            margin-right: (@basePadding / 2);
+        }
+    }
+    a {
+        color: @foregroundColor;
+        text-decoration: none;
+        padding-bottom: 4px;
+        &:hover {
+            color: lighten(@foregroundColor, 10);
+        }
+        &.active {
+            color: @foregroundColor;
+            border-bottom: 2px solid fade(@foregroundColor, 70);
+        }
+    }
+}
+
+.brand a {
+    color: @black;
+}

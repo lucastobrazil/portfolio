@@ -1,15 +1,18 @@
 @import '../../styles/vars.less';
 @import '../../styles/responsive-mixins.less';
 
-.container {
+.inner {
     padding: @basePadding;
+    padding-top: (@basePadding * 2);
+    height: 100vh;
 }
 
-.header {
+.container {
     background-color: @primaryColor;
     padding: 0;
     color: @white;
     border-top: 10px solid darken(@primaryColor, 5);
+    margin-top: 80px;
 }
 
 .subHeading {

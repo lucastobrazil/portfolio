@@ -5,6 +5,6 @@
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <path d="M11,28 L33,28 L33,33 L11,33 L6,33 L6,6 L11,6 L11,28 Z" id="Combined-Shape" fill="#ffffff" transform="translate(19.500000, 19.500000) rotate(-315.000000) translate(-19.500000, -19.500000) "></path>
+        <path d="M11,28 L33,28 L33,33 L11,33 L6,33 L6,6 L11,6 L11,28 Z" id="Combined-Shape" fill="#000" transform="translate(19.500000, 19.500000) rotate(-315.000000) translate(-19.500000, -19.500000) "></path>
     </g>
 </svg>

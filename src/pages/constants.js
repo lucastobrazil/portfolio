@@ -7,13 +7,15 @@ export const ROLES = {
 };
 
 export const SECTIONS = {
-    DESIGN_DEV: 'Design, Development and Production',
-    LEADERSHIP: 'Leadership and Coordination',
+    DESIGN_DEV: 'Design, Development & Production',
+    LEADERSHIP: 'Leadership & Coordination',
     ABOUT: 'About Me'
 };
 
 export const LINKS = {
-    SI: 'small-improvements',
+    DESIGN: 'design',
+    LEADERSHIP: 'leadership',
+    ABOUT: 'about',
     MMN: 'manage-my-nightlife',
     HHR: 'heaven-hr',
     NM: 'nightlife-music',

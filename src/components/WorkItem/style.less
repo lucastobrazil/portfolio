@@ -1,6 +1,6 @@
 @import '../../styles/vars.less';
-@workItemPadding: (@basePadding / 3);
-@height: 180px;
+@workItemPadding: (@basePadding * 2/3);
+@height: 310px;
 
 .inner {
     position: relative;
@@ -11,18 +11,21 @@
     flex-direction: column;
     height: @height;
     width: 100%;
-    box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+    // box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+    box-shadow: @boxShadow;
     background: @white;
     font-size: inherit;
     border: none;
     border-radius: @borderRadius * 2;
     overflow: hidden;
     transition: box-shadow 150ms ease, transform 150ms ease;
+    text-decoration: none;
 
     &:hover, &:active, &:focus {
-        transform: perspective(500px) translate3d(0, 0, 10px);
+        transform: perspective(500px) translate3d(0, -5px, 0);
         cursor: pointer;
-        box-shadow: 0 3px 5px rgba(0,0,0,0.3);
+        // box-shadow: 0 3px 5px rgba(0,0,0,0.3);
+        box-shadow: 0 30px 30px rgba(0,0,0,.12);
     }
 }
 
@@ -32,26 +35,26 @@
     width: 100%;
     height: @height;
     width: 100%;
-    // opacity: 0.5;
     background-size: cover;
+    background-position-x: 50%;
 }
 
 .content {
     padding: @workItemPadding;
-    position: absolute;
-    bottom: 0;
     font-size: @fontSizeS;
-    background: @primaryColor;
-    color: white;
-    width: calc(100% - 20px);
+    background: @white;
+    color: @lightGrey;
+    width: 100%;
     &, h1 {
         font-family: @fontFamilySansSerif;
     }
     h1 {
         font-size: @fontSize;
+        font-weight: 500;
         margin: @workItemPadding;
         z-index: 2;
         margin: 0;
+        color: @offBlack;
     }
 }
 

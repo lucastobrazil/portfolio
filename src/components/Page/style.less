@@ -45,9 +45,17 @@
         margin-bottom: 0;
         color: @primaryColor;
 
+        &:not(:first-child) {
+            margin-top: @basePadding;
+        }
+
         & + p,
         & + ul, {
             margin-top: (@basePadding / 3);
+        }
+
+        &.toolsHeader {
+            margin-bottom: (@basePadding);
         }
     }
 
@@ -88,16 +96,17 @@
     font-family: @fontFamilySansSerif;
     background-color: @primaryColor;
     color: @white;
-    padding: @modalPadding 0;
+    padding: (@modalPadding / 3) 0;
     position: fixed;
     width: 100%;
-    top: 0;
+    top: 80px;
     .widthMax(S, {
         padding: (@modalPadding * (2/3)) 0;
     });
 
     h1, h2 {
         display: inline-block;
+        font-size: @fontSize;
     }
     h1 {
         font-weight: @fontWeightBold;
@@ -105,7 +114,6 @@
         margin-right: (@basePadding / 3);
     }
     h2 {
-        font-size: @fontSize;
         font-weight: @fontWeightLight;
         margin: 0;
         opacity: 0.6;
@@ -124,18 +132,11 @@
 .close {
     background: none;
     border: none;
-    position: absolute;
-    color: @white;
     top: @modalPadding;
     font-size: 15px;
     cursor: pointer;
     z-index: 1;
-    margin-left: -10px;
-    margin-top: -20px;
-    .widthMin(S, {
-        margin-top: -10px;
-        margin-left: -@modalPadding;
-    });
+    margin-right: 20px;
     text-decoration: none;
     opacity: .7;
 
