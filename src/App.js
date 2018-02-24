@@ -39,7 +39,7 @@ class App extends Component {
 
 const AppContent = () => (
   <Switch>
-    <Route exact path="/" component={Home} />
+    <Route exact path="/" component={Header} />
     <Route exact path={`/${LINKS.SI}`} component={SiPage} />
     <Route exact path={`/${LINKS.MMN}`} component={MmnPage} />
     <Route exact path={`/${LINKS.HHR}`} component={HhrPage} />
@@ -53,17 +53,6 @@ const AppContent = () => (
     <Route exact path={`/${LINKS.LEADERSHIP}`} component={Leadership} />
     <Route exact path={`/${LINKS.ABOUT}`} component={AboutMe} />
   </Switch>
-);
-
-const Home = () => (
-  <Fragment>
-
-    <Header />
-    {/* <Intro /> */}
-    {/* <UiDev /> */}
-    {/* <Leadership /> */}
-    {/* <AboutMe /> */}
-  </Fragment>
 );
 
 export default App;
