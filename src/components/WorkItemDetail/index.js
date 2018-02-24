@@ -5,33 +5,14 @@ import classNames from 'classnames';
 import ToolsIcon from '../ToolsIcon';
 import backIcon from './images/back_x.svg';
 import ImageWithCaption from '../ImageWithCaption';
+import Section from '../Section';
 
-class BackButton extends Component {
-    static contextTypes = {
-        router: PropTypes.object, // replace with PropTypes.object if you use them
-    }
-
-    render() {
-        return (
-            <button
-                className={this.props.className}
-                onClick={this.context.router.history.goBack}>
-                <img src={backIcon} alt="Close Modal" /> Back
-        </button>
-        )
-    }
-}
-
-export default function Page({ title, role, linkUrl, modalContent, history }) {
+export default function WorkItemDetail({ title, role, linkUrl, modalContent, history }) {
     const { jobArt, jobDescription, jobOverview, tools, sections } = modalContent;
     const { team, tasks } = jobOverview;
     return (
-        <div className={styles.container}>
-            {/* <header className={styles.header}>
-                <div className={styles.headerInner}>
-                </div>
-            </header> */}
-            <Section>
+        <Fragment>
+            <Section className={styles.introSection}>
                 <BackButton className={styles.close} />
                 <h1>{title}</h1>
                 <h2>{role}</h2>
@@ -56,26 +37,33 @@ export default function Page({ title, role, linkUrl, modalContent, history }) {
                 <h2 className={styles.toolsHeader}>Tools</h2>
                 {tools.map(i => <ToolsIcon icon={i} />)}
             </Section>
-        </div>
-    );
-}
-
-function Section({ children, className, altBg }) {
-    return (
-        <section className={classNames(className, styles.section, { [styles.altBg]: altBg })}>
-            <div className={styles.inner}>
-                {children}
-            </div>
-        </section>
+        </Fragment>
     );
 }
 
 function DetailBodySection({ title, altBg, body }) {
     return (
-        <Section altBg={altBg}>
+        <Section altBg={altBg} className={styles.section}>
             <h2>{title}</h2>
             <div className={styles.detailBody}>{body}</div>
         </Section>
     )
 }
 
+
+
+class BackButton extends Component {
+    static contextTypes = {
+        router: PropTypes.object, // replace with PropTypes.object if you use them
+    }
+
+    render() {
+        return (
+            <button
+                className={this.props.className}
+                onClick={this.context.router.history.goBack}>
+                <img src={backIcon} alt="Close Modal" /> Back
+            </button>
+        )
+    }
+}

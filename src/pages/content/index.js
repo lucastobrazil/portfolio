@@ -1,17 +1,17 @@
 import React from 'react';
-import Page from '../../components/Page';
+import WorkItemDetail from '../../components/WorkItemDetail';
 import WorkItem from '../../components/WorkItem';
 
 import CONTENT from './content';
 
-const AnchormanPage = () => <Page {...CONTENT.ACMS} />;
-const PrintAnimationPage = () => <Page {...CONTENT.PAN} />;
-const SiPage = () => <Page {...CONTENT.SI} />;
-const MmnPage = () => <Page {...CONTENT.MMN} />;
-const HhrPage = () => <Page {...CONTENT.HHR} />;
-const NmPage = () => <Page {...CONTENT.NM} />;
-const NmpPage = () => <Page {...CONTENT.NMP} />;
-const VideoProductionPage = () => <Page {...CONTENT.VID} />;
+const AnchormanPage = () => <WorkItemDetail {...CONTENT.ACMS} />;
+const PrintAnimationPage = () => <WorkItemDetail {...CONTENT.PAN} />;
+const SiPage = () => <WorkItemDetail {...CONTENT.SI} />;
+const MmnPage = () => <WorkItemDetail {...CONTENT.MMN} />;
+const HhrPage = () => <WorkItemDetail {...CONTENT.HHR} />;
+const NmPage = () => <WorkItemDetail {...CONTENT.NM} />;
+const NmpPage = () => <WorkItemDetail {...CONTENT.NMP} />;
+const VideoProductionPage = () => <WorkItemDetail {...CONTENT.VID} />;
 
 export {
     AnchormanPage,

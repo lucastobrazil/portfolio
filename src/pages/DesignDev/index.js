@@ -27,8 +27,8 @@ const workItemMiniData = [
     },
 ]
 
-export default function UiDev() {
-    return <Section altBg={true} name="design">
+export default function DesignDev() {
+    return <Section altBg={true}>
         <h1>{SECTIONS.DESIGN_DEV}</h1>
         <div className={styles.workItemGrid}>
             {workItems.map(item => item)}

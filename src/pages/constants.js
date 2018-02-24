@@ -16,6 +16,7 @@ export const LINKS = {
     DESIGN: 'design',
     LEADERSHIP: 'leadership',
     ABOUT: 'about',
+    SI: 'small-improvements',
     MMN: 'manage-my-nightlife',
     HHR: 'heaven-hr',
     NM: 'nightlife-music',

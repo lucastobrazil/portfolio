@@ -1,28 +1,17 @@
 @import '../../styles/vars.less';
 @import '../../styles/responsive-mixins.less';
-
-.container {
-    margin-top: 135px;
-    .widthMax(S, {
-        margin-top: 85px;
-    });
-
-    iframe {
-        max-width: 100%;
-    }
-}
-.altBg {
-    background-color: @offWhite;
-}
-.tools {
-    composes: altBg;
+.introSection {
+    position: relative;
 }
 
 .section {
+    iframe {
+        max-width: 100%;
+    }
     .inner {
         margin: 0 auto;
         max-width: @workItemDetailMaxWidth;
-        padding: (@modalPadding * 2) @modalPadding;
+        padding: (@basePadding * 2) @basePadding;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -81,7 +70,6 @@
 
 .jobArt {
     max-width: 270px;
-    // margin-top: -(@modalPadding * 5);
 }
 
 .jobDetails {
@@ -91,54 +79,18 @@
        flex-wrap: wrap;
     });
 }
-
-.header {
-    font-family: @fontFamilySansSerif;
-    background-color: @primaryColor;
-    color: @white;
-    padding: (@modalPadding / 3) 0;
-    position: fixed;
-    width: 100%;
-    top: 80px;
-    .widthMax(S, {
-        padding: (@modalPadding * (2/3)) 0;
-    });
-
-    h1, h2 {
-        display: inline-block;
-        font-size: @fontSize;
-    }
-    h1 {
-        font-weight: @fontWeightBold;
-        margin-bottom: 0;
-        margin-right: (@basePadding / 3);
-    }
-    h2 {
-        font-weight: @fontWeightLight;
-        margin: 0;
-        opacity: 0.6;
-    }
-
-    .headerInner {
-        max-width: @workItemDetailMaxWidth;
-        margin: 0 auto;
-        padding: 0 @basePadding;
-        .widthMax(S, {
-            padding: 0 (@basePadding * .5);
-        });
-    }
-}
-
 .close {
     background: none;
     border: none;
-    top: @modalPadding;
+    top: @basePadding;
     font-size: 15px;
     cursor: pointer;
     z-index: 1;
-    margin-right: 20px;
     text-decoration: none;
     opacity: .7;
+    position: absolute;
+    top: 20px;
+    margin-left: -(@basePadding);
 
     img {
         vertical-align: sub;

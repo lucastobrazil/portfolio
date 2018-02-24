@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import ScrollMemory from 'react-router-scroll-memory';
 
 import Nav from './pages/Nav';
 import Home from './pages/Home';
-import UiDev from './pages/UiDev';
+import DesignDev from './pages/DesignDev';
 import Leadership from './pages/Leadership';
 import AboutMe from './pages/AboutMe';
 import Footer from './pages/Footer';
@@ -24,12 +25,14 @@ class App extends Component {
   render() {
     return (
       <Router basename={process.env.PUBLIC_URL}>
-        <main>
+        <div>
           <Nav />
-          {/* <ScrollMemory /> */}
-          <AppContent />
+          <ScrollMemory />
+          <main>
+            <AppContent />
+          </main>
           <Footer />
-        </main>
+        </div>
       </Router>
     );
   }
@@ -47,7 +50,7 @@ const AppContent = () => (
     <Route exact path={`/${LINKS.VID}`} component={VideoProductionPage} />
     <Route exact path={`/${LINKS.ACMS}`} component={AnchormanPage} />
 
-    <Route exact path={`/${LINKS.DESIGN}`} component={UiDev} />
+    <Route exact path={`/${LINKS.DESIGN}`} component={DesignDev} />
     <Route exact path={`/${LINKS.LEADERSHIP}`} component={Leadership} />
     <Route exact path={`/${LINKS.ABOUT}`} component={AboutMe} />
   </Switch>

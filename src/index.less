@@ -1,5 +1,8 @@
 @import './styles/vars.less';
 @import './styles/responsive-mixins.less';
+html, body {
+  height: 100%;
+}
 
 body {
   margin: 0;
@@ -7,6 +10,10 @@ body {
   font-family: @fontFamilySansSerif;
   font-size: @fontSize;
   color: @black;
+}
+
+main {
+  margin-top: 80px;
 }
 
 p, ul {

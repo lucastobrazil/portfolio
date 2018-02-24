@@ -338,7 +338,7 @@ export default {
                                     <li>We took this opportunity to rethink and refactor a lot of the code to follow a consistent pattern and structure.</li>
                                     <li>This  also meant an opportunity to update the style of many components (well, basically all of them!)</li>
                                 </ul>
-                                <iframe src="https://player.vimeo.com/video/180569819?color=4777ff&title=0&byline=0&portrait=0" width="470" height="264" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                                <iframe src="https://player.vimeo.com/video/180569819?color=4777ff&title=0&byline=0&portrait=0" width="470" height="264" frameborder="0" webkitallowfullscreen mozallowfullscreen allowFullScreen></iframe>
                             </div>
                             <img src={siBeforeAfter} style={{ maxWidth: '100%' }} alt="Small Improvements before and after" />
                         </div>
