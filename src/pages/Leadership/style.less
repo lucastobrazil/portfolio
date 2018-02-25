@@ -1,7 +1,21 @@
 @import '../../styles/vars.less';
+@import '../../styles/responsive-mixins.less';
 
 .workItemGrid {
     display: flex;
     flex-wrap: wrap;
     margin: 0 -(@basePadding / 3);
+}
+
+.textImage {
+    display: flex;
+    .widthMax(S, {
+        flex-wrap: wrap;
+    });
+
+    .widthMin(M, {
+        img {
+            margin-left: 20px;
+        }
+    })
 }

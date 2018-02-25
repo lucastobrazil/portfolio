@@ -5,16 +5,18 @@ import ToolsIcon from '../ToolsIcon';
 import backIcon from './images/back_x.svg';
 import ImageWithCaption from '../ImageWithCaption';
 import Section from '../Section';
+import classNames from 'classnames';
 
-export default function WorkItemDetail({ title, role, linkUrl, modalContent, history }) {
+export default function WorkItemDetail({ title, role, year, linkUrl, modalContent, history }) {
     const { jobArt, jobDescription, jobOverview, tools, sections } = modalContent;
     const { team, tasks } = jobOverview;
     return (
         <Fragment>
-            <Section className={styles.introSection}>
-                <BackButton className={styles.close} />
-                <h1>{title}</h1>
-                <h2>{role}</h2>
+            <Section className={classNames(styles.section, styles.introSection)}>
+                <BackButton className={styles.back} />
+                <h1 className={styles.mainTitle}>{title}</h1>
+                <h2 className={styles.role}>{role} &middot; {year}</h2>
+
                 <div className={styles.jobDetails}>
                     <div>
                         <h2>Team:</h2>
@@ -31,10 +33,10 @@ export default function WorkItemDetail({ title, role, linkUrl, modalContent, his
                     <ImageWithCaption className={styles.jobArt} src={jobArt} />
                 </div>
             </Section>
-            {sections.map(s => <DetailBodySection {...s} />)}
+            {sections.map((s, i) => <DetailBodySection {...s} key={i} />)}
             <Section altBg={true}>
                 <h2 className={styles.toolsHeader}>Tools</h2>
-                {tools.map(i => <ToolsIcon icon={i} />)}
+                {tools.map((tool, i) => <ToolsIcon icon={tool} key={i} />)}
             </Section>
         </Fragment>
     );
@@ -61,7 +63,7 @@ class BackButton extends Component {
             <button
                 className={this.props.className}
                 onClick={this.context.router.history.goBack}>
-                <img src={backIcon} alt="Close Modal" /> Back
+                <img src={backIcon} alt="Back to my work" /> My Work
             </button>
         )
     }

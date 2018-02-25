@@ -6,19 +6,14 @@ import lucasPhoto from '../../components/ProfileBubble/lucas.jpg';
 import styles from './style.less';
 
 export default function AboutMe() {
-    return <Section altBg={true} name="about" className={styles.container}>
+    return <Section altBg={true} className={styles.container}>
         <div>
             <h1>{SECTIONS.ABOUT}</h1>
-            <p>
-                My 10 years of experience has covered a broad range of areas.
-          </p>
-            <p>
-                From Design and Digital Media production to HTML, CSS and JavaScript development, what I’ve learned about myself is that I love solving problems, working with people and using tools to build things.
-          </p>
-            <p>Over 10 years professional experience in Graphic Design, UI Design, Multimedia, Front End Development and Project Team leading. </p>
-            <p>People skills are my forte; I enjoy working in teams, value thinking laterally about solving a problem and being creative to get the best possible result. </p>
-            <p>Technically, I'm a fast learner and quick to find the conceptual links between one skill and another. From the computer to the workshop, the pencil to the spreadsheet, I'm ready to get up to speed and get on with the project!</p>
-            <p>Beyond my tertiary qualifications and experience in the Creative Industries, my personality and compassion for others means I am ready to work on any project with any team. I enjoy taking the lead and being the organiser, but also love to get my hands dirty at a grass roots level.</p>
+            <p>Hi, I’m Lucas! An Australian designer, developer and leader currently living in Berlin with my wife Claire and 6-month-old son Charlie. Together we all love life, people, travel, music, art and projects.</p>
+            <p>Now, onto the professional stuff...</p>
+            <p>My ten years of experience has covered a broad range of areas. From design and digital media production to HTML, CSS, native and JavaScript development, what I’ve learned about myself is that I love solving problems, working with people and using tools to build things.</p>
+            <p>After graduating from Queensland University of Technology (Australia) with a double bachelor degree in Business and Creative Industries, I have worked mostly in the worlds of HR-tech and entertainment-tech. My professional experience covers areas of graphic / multimedia design, UI (and some UX) design, front end development and more recently; leadership and project management in design teams.</p>
+            <p>Beyond my tertiary qualifications and experience in the creative industries, my personality and compassion for others means I am ready to work on any project with any team. I enjoy taking the lead and being the organiser, but also love to get my hands dirty at a grassroots level.</p>
         </div>
         <Image src={lucasPhoto} />
     </Section>;

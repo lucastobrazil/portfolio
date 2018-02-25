@@ -4,36 +4,27 @@ import WorkItem from '../../components/WorkItem';
 
 import CONTENT from './content';
 
-const AnchormanPage = () => <WorkItemDetail {...CONTENT.ACMS} />;
-const PrintAnimationPage = () => <WorkItemDetail {...CONTENT.PAN} />;
-const SiPage = () => <WorkItemDetail {...CONTENT.SI} />;
-const MmnPage = () => <WorkItemDetail {...CONTENT.MMN} />;
+const ArundelPage = () => <WorkItemDetail {...CONTENT.ADL} />;
 const CddjPage = () => <WorkItemDetail {...CONTENT.CDDJ} />;
 const HhrPage = () => <WorkItemDetail {...CONTENT.HHR} />;
+const MmnPage = () => <WorkItemDetail {...CONTENT.MMN} />;
 const NmPage = () => <WorkItemDetail {...CONTENT.NM} />;
-const NmpPage = () => <WorkItemDetail {...CONTENT.NMP} />;
-const VideoProductionPage = () => <WorkItemDetail {...CONTENT.VID} />;
+const SiPage = () => <WorkItemDetail {...CONTENT.SI} />;
 
 export {
-    AnchormanPage,
-    PrintAnimationPage,
-    SiPage,
-    MmnPage,
+    ArundelPage,
     CddjPage,
     HhrPage,
+    MmnPage,
     NmPage,
-    NmpPage,
-    VideoProductionPage
+    SiPage,
 };
 
 export const workItems = [
     <WorkItem {...CONTENT.SI} />,
     <WorkItem {...CONTENT.CDDJ} />,
     <WorkItem {...CONTENT.MMN} />,
+    <WorkItem {...CONTENT.ADL} />,
     <WorkItem {...CONTENT.HHR} />,
     <WorkItem {...CONTENT.NM} />,
-    <WorkItem {...CONTENT.PAN} />,
-    <WorkItem {...CONTENT.NMP} />,
-    <WorkItem {...CONTENT.VID} />,
-    // <WorkItem {...CONTENT.ACMS} />,
 ];

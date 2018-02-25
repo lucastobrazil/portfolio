@@ -1,5 +1,7 @@
 import React, { Fragment } from 'react';
+import { Link } from 'react-router-dom';
 import ImageWithCaption from '../../components/ImageWithCaption';
+import Image from '../../components/Section/Image';
 import anchormanPreview from './images/anchorman-preview.jpg';
 import anchormanScreen from './images/anchorman-cms.jpg';
 import { ROLES, LINKS } from '../../pages/constants';
@@ -16,115 +18,91 @@ import cddjPreview from './images/cddj-preview.png';
 import nmvPrintPreview from './images/nmv-print-preview.jpg';
 import nightlifePreview from './images/nightlife-preview.jpg';
 import nmWebsiteBlocks from './images/nm-website-blocks.jpg';
+import crowdDjLogo from './images/crowdDJ-logo.jpg';
 import activityStream from './images/si-activity-stream.png';
 import meetingsImage from './images/si-meetingnote.png';
 import siPreview from './images/si-preview.png';
 import styleGuide from './images/si-styleguide.png';
 import siBeforeAfter from './images/siBeforeAfter.png';
 
-export default {
-    ACMS: {
-        title: 'Anchorman News CMS',
-        role: ROLES.FE_DEV,
-        linkUrl: LINKS.ACMS,
-        style: {
-            backgroundImage: `url(${anchormanPreview})`,
-        },
-        modalContent: {
-            jobDescription: 'I designed a complete system to manage the content of a Live News feed. The client needed a quick way to create, manage and deploy content on the go.',
-            jobOverview: {
-                team: 'Flying solo.',
-            },
-            tools: ['less', 'illustrator', 'jquery'],
-            sections: [
-                {
-                    title: 'The System',
-                    altBg: true,
-                    body:
-                        <Fragment>
-                            <ul>
-                                <li>
-                                    To keep the project lightweight, I chose to roll my own - and built the front and back end of this system using PHP, Apache, MySQL database, jQuery (for some UI interaction) and LESS CSS.</li>
-                                <li>
-                                    The system also builds the news feed in order to generate an online version for the client’s hardware systems.
-                            </li>
-                            </ul>
-                            <ImageWithCaption src={anchormanScreen} alt="Anchorman News CMS" caption="Users can manage news articles, change their Live / Offline status easily." />
-                        </Fragment>
-                }
-            ]
-        }
+export const workItemMiniData = [
+    {
+        title: 'react-with-animation',
+        description: 'Open-source library for handling short-lived CSS animations in react',
+        linkUrl: 'https://github.com/SmallImprovements/react-with-animation',
+        linkLabel: 'Github',
     },
-    PAN: {
+    {
+        title: 'cornerstone-components',
+        description: 'Custom-build components for the Wordpress \'cornerstone\' editor',
+        linkUrl: '#',
+        linkLabel: 'Github',
+    },
+    {
+        title: 'knockout-assetlist',
+        description: 'A simple asset list with sidebar using KnockoutJS and Bootstrap',
+        linkUrl: 'https://github.com/lucastobrazil/knockout-assetlist',
+        linkLabel: 'Github',
+    },
+];
+
+export default {
+    ADL: {
         title: 'Arundel',
         role: ROLES.PRINT_ANIMATION,
-        linkUrl: LINKS.PAN,
+        year: '2014',
+        linkUrl: LINKS.ADL,
         style: {
             backgroundImage: `url(${channelsPreview})`,
         },
         modalContent: {
-            jobDescription: 'I love art projects - and luckily my musical project \'Arundel\' provides me with many opportunities to do them!',
+            jobDescription: 'I love art projects - and luckily my musical project \'Arundel\' provides me with many opportunities to do them! Over the years I’ve used this project as an outlet for many creative works.',
             jobOverview: {
                 team: 'Flying solo, sometimes with collaborators',
                 tasks:
                     <ul>
+                        <li>Music composition, arrangement, recording and production</li>
                         <li>Art direction for music videos</li>
                         <li>Concept art creation and preplanning for CD artwork</li>
-                        <li>Sculpting, Painting and Photography</li>
-                        <li>Costume and Set Design</li>
+                        <li>Sculpture, painting and photography</li>
+                        <li>Costume and set design</li>
                         <li>Tour posters</li>
                     </ul>
             },
-            tools: ['after-effects', 'premiere', 'photoshop'],
+            tools: ['ableton', 'after-effects', 'premiere', 'photoshop'],
             sections: [
                 {
                     title: 'Album Artwork',
                     altBg: true,
                     body:
-                        <p>Channels, Olive Caves</p>
+                        <ul>
+                            <li>Created album artwork using sculpture, paper, photography and lighting</li>
+                        </ul>
                 },
                 {
-                    title: 'Tour Posters',
+                    title: 'Video',
                     altBg: false,
                     body:
-                        <p>foo</p>
+                        <ul>
+                            <li>Set design and storyboarding for “Chimpanzee” music video</li>
+                            <li>Art direction for experimental visuals using cameras, bubbles, oils and water</li>
+                        </ul>
                 },
-            ]
-        }
-    },
-    VID: {
-        title: 'Chimpanzee',
-        role: ROLES.VIDEO_PRODUCTION,
-        linkUrl: LINKS.VID,
-        style: {
-            backgroundImage: `url(${chimpanzeePreview})`,
-        },
-        modalContent: {
-            jobDescription: 'I love art projects - and luckily my musical project \'Arundel\' provides me with many opportunities to do them!',
-            jobOverview: {
-                team: 'Talented crew(s) in Brisbane, Australia',
-                tasks:
-                    <ul>
-                        <li>Art direction for music video</li>
-                        <li>Set design (we filmed this under my house)</li>
-                        <li>Post-production and editing</li>
-                        <li>Acting (!!!)</li>
-                    </ul>
-            },
-            tools: ['after-effects', 'premiere', 'photoshop'],
-            sections: [
                 {
-                    title: 'Music Video',
+                    title: 'Tour posters',
                     altBg: true,
                     body:
-                        <iframe title="Chimpanzee Music Video" width="560" height="315" src="https://www.youtube.com/embed/ZGodcPuO7-Y?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
-                }
+                        <ul>
+                            <li>Graphic and print design</li>
+                        </ul>
+                },
             ]
         }
     },
     HHR: {
         title: 'HeavenHR',
         role: ROLES.FE_DEV,
+        year: '2016',
         linkUrl: LINKS.HHR,
         style: {
             backgroundSize: '250px',
@@ -133,36 +111,28 @@ export default {
             backgroundImage: `url(${hhrPreview})`,
         },
         modalContent: {
-            jobDescription: 'HeavenHR is an online HR tool to manage employee data, insurance, vacation requests and time tracking for freelancers.',
+            jobDescription: 'HeavenHR is an online HR tool to manage employee data, insurance, vacation requests and time tracking for freelancers. When I joined, the software had just come out of the MVP phase where many freelancers had been working on the front end (it was a bit messy...).',
             jobOverview: {
-                team: 'I was hired as the first Senior Front End developer at HeavenHR and worked with about twenty back-end developers. We had a dedicated web designer and product managers often presented wireframes directly to me.',
+                team: 'I was hired as the first senior front end developer at HeavenHR and worked with about fifteen back end developers. We had a dedicated web designer and product managers who prepared wireframes.',
                 tasks:
                     <ul>
-                        <li>Refactoring of old MVP code</li>
-                        <li>Organising CSS into a more modular format</li>
-                        <li>Defining a design system for UI components</li>
+                        <li>Refactoring old MVP code</li>
+                        <li>Organising CSS (SASS) into a more modular format</li>
+                        <li>Defining a design system for UI components</li>
                         <li>Implemented new landing page designs</li>
-                        <li>Helped reorganise the app's JavaScript code to be more modular</li>
+                        <li>Helped organise the app&#39;s JavaScript code to be more modular</li>
                     </ul>
             },
-            tools: ['sass', 'illustrator', 'jquery'],
+            tools: ['sass', 'illustrator', 'jquery', 'bootstrap', 'photoshop'],
             sections: [
                 {
-                    title: 'App Design and Style',
-                    altBg: true,
-                    body:
-                        <p>As the product grew out of its MVP phase, I played a large part in its re-styling.</p>
-                },
-                {
-                    title: 'Feature: Vacation Management',
+                    title: 'Vacation Management',
                     altBg: false,
                     body:
                         <Fragment>
                             <ul>
                                 <li>Helped build pages with Ajax requests instead of full page reloads after each change.</li>
                                 <li>Implemented inline editing of tables</li>
-                                <li>Both participants can prepare an agenda (Talking Points) and afterwards add notes.</li>
-                                <li>Designed UI for individual meetings, dashboard and meetings ‘space’ where users can see all of their meetings</li>
                             </ul>
                             <ImageWithCaption src={vacationScreen} caption="Vacation Management - a feature I built and assisted with the design" />
                         </Fragment>
@@ -171,33 +141,45 @@ export default {
         }
     },
     CDDJ: {
-        title: 'CrowdDJ',
+        title: 'CrowdDj',
         role: ROLES.UI_DEV,
+        year: '2015',
         linkUrl: LINKS.CDDJ,
         style: {
             backgroundColor: '#36CF75',
             backgroundImage: `url(${cddjPreview})`,
         },
         modalContent: {
-            jobArt: mmnJobArt,
-            jobDescription: 'Manage My Nightlife - an app designed across Web, iOS and Android platforms for users of a Music Video playback system. The system outputs music videos onto the TV screens inside a venue.',
+            jobArt: cddjPreview,
+            jobDescription: 'CrowdDJ is a mobile jukebox app that lets users inside a bar, pub or club directly interact with the music system. They can find out the current song playing, see what\'s up next, and queue up their favourite songs. ',
             jobOverview: {
-                team: 'I worked as designer and front end developer alongside a team of 5 other full-stack developers.',
+                team: 'I worked as a UI designer and developer alongside one native iOS / Android developer.',
                 tasks:
                     <ul>
-                        <li>UI &amp; UX design and development - all platforms</li>
-                        <li>Colour pallette to rollout across all platforms</li>
-                        <li>Colour functions coded to  aid in user feedback and interactivity</li>
-                        <li>Custom icon sets</li>
+                        <li>UI & UX design and development</li>
+                        <li>App icon design</li>
+                        <li>Organisation and preparation of shared assets across platforms</li>
                     </ul>
             },
-            tools: ['less', 'illustrator', 'photoshop', 'knockout'],
-            section: []
+            tools: ['less', 'xcode', 'illustrator', 'photoshop', 'android-studio'],
+            sections: [
+                {
+                    title: 'UI design and development',
+                    altBg: true,
+                    body:
+                        <ul>
+                            <li>Users can check-in to a venue and instantly interact with its music playlist</li>
+                            <li>Participating venues’ logos are added as branding in the app</li>
+                            <li>Users can connect CrowdDJ to Spotify and add songs they like to their own playlists</li>
+                        </ul>
+                }
+            ]
         }
     },
     MMN: {
-        title: 'Manage My Nightlife',
+        title: 'ManageMyNightlife',
         role: ROLES.UI_DEV,
+        year: '2015',
         linkUrl: LINKS.MMN,
         style: {
             backgroundColor: '#36CF75',
@@ -205,15 +187,13 @@ export default {
         },
         modalContent: {
             jobArt: mmnJobArt,
-            jobDescription: 'Manage My Nightlife - an app designed across Web, iOS and Android platforms for users of a Music Video playback system. The system outputs music videos onto the TV screens inside a venue.',
+            jobDescription: <Fragment><p>ManageMyNightlife (MMN) is an iOS, Android and Web app for venue managers of venues that use the <a href="http://www.nightlife.com.au" target="_blank">Nightlife Music</a> video playback system. The system outputs music videos and advertising onto the TV screens around the venue.</p><p>In the past, managers interacted with the system directly via a very old interface. MMN was created as a new front end  that communicated with the system via a new REST API. </p></Fragment>,
             jobOverview: {
                 team: 'I worked as designer and front end developer alongside a team of 5 other full-stack developers.',
                 tasks:
                     <ul>
-                        <li>UI &amp; UX design and development - all platforms</li>
-                        <li>Colour pallette to rollout across all platforms</li>
-                        <li>Colour functions coded to  aid in user feedback and interactivity</li>
-                        <li>Custom icon sets</li>
+                        <li>UI &amp; UX design and development - iOS, Android and Web</li>
+                        <li>Design and development of an advertising management module and dynamic advertisement creation widget</li>
                     </ul>
             },
             tools: ['less', 'illustrator', 'photoshop', 'knockout'],
@@ -223,21 +203,17 @@ export default {
                     altBg: true,
                     body:
                         <Fragment>
-                            <p>Working with with three back-end developers, I created the UI across all
-                            platforms, as well as getting ‘hands on’ in the code. After release, I made
-                            improvements to the UX ongoing as we discovered how users were
-                            interacting with the  app via user feedback.</p>
+                            <p>Working with with three back-end developers, I created the UI across all platforms, as well as getting ‘hands on’ in the code. After release, I made improvements to the UX ongoing as we discovered how users were interacting with the app via user feedback.</p>
                             <ImageWithCaption src={mmnHome} caption="ManageMyNightlife - song view sceren" />
                         </Fragment>
                 }, {
-                    title: 'Feature: Advertising Platform',
+                    title: 'Advertising Platform',
                     altBg: false,
                     body:
                         <Fragment>
                             <ul>
                                 <li>Users can manage advertising content that is displayed on TV screens in a venue.</li>
-                                <li>I designed an interface to let users create their own 'Text-over-image' advertisements in the browser</li>
-                                <li>Coded most of the UI for this module</li>
+                                <li>I designed and developed an interface to let users create their own &#39;Text-over-image&#39; advertisements in the browser</li>
                             </ul>
                             <ImageWithCaption src={mmnAdvertising} caption="Advertising file management for ManageMyNightlife" />
                         </Fragment>
@@ -245,80 +221,56 @@ export default {
             ]
         },
     },
-    NMP: {
+    NM: {
         title: 'Nightlife Music',
         role: ROLES.PRINT_ANIMATION,
+        year: '2009 - 2015',
         linkUrl: LINKS.NMP,
         style: {
             backgroundColor: '#36CF75',
             backgroundImage: `url(${nmvPrintPreview})`,
         },
         modalContent: {
-            jobDescription: 'Print Advertisements and Video Production',
+            jobDescription: 'I designed the Corporate website for Nightlife Music and many magazine advertising campaigns for Australian national publications.',
             jobOverview: {
-                team: 'Working alongside the Marketing department, I designed the graphics for many advertising campaigns - mostly for industry magazines. ',
+                team: 'Working in the Marketing team, I was joined by a copywriter and our marketing manager.',
                 tasks:
                     <ul>
-                        <li>Design layouts with content provided from copy writer</li>
+                        <li>Design print layouts with content provided from copywriter</li>
+                        <li>Prepare images and videos to be web-optimized for website</li>
+                        <li>Help produce animated infographic videos</li>
+                        <li>Implement layouts using X Theme in Wordpress</li>
                     </ul>
             },
             tools: ['indesign', 'premiere', 'photoshop'],
             sections: [
                 {
-                    title: 'Campaigns',
+                    title: 'Website design and development',
                     altBg: true,
                     body:
-                        <p>foo</p>
+                        <ul>
+                            <li>Creating content to add to a Wordpress theme</li>
+                            <li>Exporting images and optimizing video</li>
+                            <li>Developing a custom Twitter widget on the home page</li>
+                        </ul>
                 },
                 {
-                    title: 'Animated Infographic',
+                    title: 'Print Design',
                     altBg: false,
                     body:
-                        <p>foo</p>
+                        <ul>
+                            <li>Creative direction and concept design</li>
+                            <li>Designing layouts and assets</li>
+                            <li>Preparing designs for offset printing</li>
+                        </ul>
                 },
             ]
         },
-    },
-    NM: {
-        title: 'Nightlife Music',
-        role: ROLES.WEB_DESIGN,
-        linkUrl: LINKS.NM,
-        style: {
-            backgroundColor: '#36CF75',
-            backgroundImage: `url(${nightlifePreview})`,
-        },
-        modalContent: {
-            jobDescription: 'Corporate website for Nightlife Music',
-            jobOverview: {
-                team: 'Working in the Marketing team, I was joined by a copy writer and our marketing manager.',
-                tasks:
-                    <ul>
-                        <li>Design layouts with content provided from copy writer</li>
-                        <li>Prepare images and videos to be web-optimized</li>
-                        <li>Implement layouts using X Theme in Wordpress</li>
-                    </ul>
-            },
-            tools: ['wordpress', 'illustrator', 'premiere'],
-            sections: [
-                {
-                    title: 'Website Design and Style',
-                    altBg: true,
-                    body:
-                        <Fragment>
-                            <ul>
-                                <li>Creating content to add to a Wordpress theme</li>
-                                <li>Exporting images and optimizing video</li>
-                                <li>Implementing a custom Twitter widget on the home page</li>
-                            </ul>
-                            <ImageWithCaption src={nmWebsiteBlocks} caption="Layout content for Nightlife Music's website" />
-                        </Fragment>
-                },
-            ]
-        }
     },
     SI: {
         title: 'Small Improvements',
         role: ROLES.UI_DEV,
+        year: '2017',
         linkUrl: LINKS.SI,
         style: {
             backgroundSize: '270px',
@@ -326,41 +278,44 @@ export default {
             backgroundImage: `url(${siPreview})`,
         },
         modalContent: {
-            jobDescription: 'Small Improvements is a feedback tool that allows companies to conduct 360º Feedback rounds, set Objectives, conduct 1:1 Meetings, give Praise / Kudos and  formal Performance Reviews.',
+            jobDescription: 'Small Improvements is a web-based feedback tool where companies and their staff can conduct 360º feedback rounds, set objectives, conduct 1:1 meetings, give praise / kudos and write formal performance reviews.',
             jobOverview: {
-                team: 'Working in a cross-functional team consisting of one designer and two full-stack developers. Across teams, all designers meet as a ‘meta team’ - my role also includes being the Design Coordinator.',
+                team: <Fragment>We worked in cross-functional teams consisting of one designer and two full-stack developers. Across teams, all designers met as a ‘meta team’ - my role also included coordination of desk tasks and having one-on-one meetings with team members (<Link to="/leadership">see more about my experience in leadership</Link>).</Fragment>,
                 tasks:
                     <ul>
+                        <li>Steer the overall design of the product</li>
                         <li>Gather requirements from Product Managers</li>
-                        <li>Explore and define the problem</li>
+                        <li>Develop components in React, Angular and older JS technologies</li>
                         <li>Create wireframes and mocks using Sketch and InVision</li>
-                        <li>Iterate based on feedback</li>
+                        <li>Design and maintain a design system</li>
+                        <li>Explore and define problems, iterate based on feedback</li>
                         <li>Create visual specifications to deliver to developers</li>
+                        <li>Manage higher-level aspects of design such as style guide, component structure and information architecture</li>
                     </ul>
             },
-            tools: ['sketch', 'invision', 'less', 'react', 'webpack', 'slack', 'confluence'],
+            tools: ['sketch', 'invision', 'less', 'react', 'angular', 'webpack', 'slack', 'confluence'],
             sections: [
                 {
-                    title: 'Feature: Activity Stream',
+                    title: 'Activity Stream',
                     altBg: true,
                     body:
                         <Fragment>
                             <ul>
                                 <li>In an effort to increase transparency and engagement within the tool, we created an Activity Stream to present recent happenings.</li>
-                                <li>Designed the UI of many content items</li>
+                                <li>I designed the UI of many content items</li>
                                 <li>Created detailed specifications of how content would be aggregated and the different edge cases that can occur</li>
                             </ul>
                             <ImageWithCaption src={activityStream} caption="A preview of some of the 'Content Items' shown in the activity stream." />
                         </Fragment>
                 },
                 {
-                    title: 'Feature: 1:1  Meetings',
+                    title: '1:1  Meetings',
                     altBg: false,
                     body:
                         <Fragment>
                             <ul>
-                                <li>The newest feature at Small Improvements, designed as a place to keep track of your 1:1 meetings.</li>
-                                <li>Both participants can prepare an agenda (Talking Points) and afterwards add notes.</li>
+                                <li>The latest feature at Small Improvements, designed as a place to keep track of your 1:1 meetings</li>
+                                <li>Both participants can prepare an agenda (Talking Points) and add notes afterwards</li>
                                 <li>Designed UI for individual meetings, dashboard and meetings ‘space’ where users can see all of their meetings</li>
                             </ul>
                             <ImageWithCaption src={meetingsImage} caption="A 1:1 Meeting in Small Improvements." />
@@ -372,9 +327,9 @@ export default {
                     body:
                         <Fragment>
                             <ul>
-                                <li>Organised our components into a design system. The living style guide was built to document the components and UI patterns used within the tool.</li>
-                                <li>Acted as an advocate for using it.</li>
-                                <li>It was a pleasant place to develop new components in isolation too.</li>
+                                <li>Organised our components into a design system. The living style guide was built to document the components and UI patterns used within the tool and also to develop a vision for the future.</li>
+                                <li>Acted as an advocate for using it and encouraged devs to proactively document new components</li>
+                                <li>It also turned out to be quite a pleasant place to develop new components in isolation.</li>
                             </ul>
                             <ImageWithCaption src={styleGuide} caption="The Small Improvements style guide documenting our design patterns." />
                         </Fragment>
@@ -385,11 +340,11 @@ export default {
                         <div>
                             <div style={{ display: 'flex' }}>
                                 <ul>
-                                    <li>When I joined, we were in the process of converting the SI app to be mobile-responsive. </li>
+                                    <li>When I joined, we were in the process of converting the SI app to be mobile-responsive.</li>
                                     <li>We took this opportunity to rethink and refactor a lot of the code to follow a consistent pattern and structure.</li>
-                                    <li>This  also meant an opportunity to update the style of many components (well, basically all of them!)</li>
+                                    <li>This also meant an opportunity to update the style of many components (well, basically all of them!)</li>
                                 </ul>
-                                <iframe title="Video of me at Small Improvements" src="https://player.vimeo.com/video/180569819?color=4777ff&title=0&byline=0&portrait=0" width="470" height="264" frameborder="0" webkitallowfullscreen mozallowfullscreen allowFullScreen></iframe>
+                                <iframe title="Video of me at Small Improvements" src="https://player.vimeo.com/video/180569819?color=4777ff&title=0&byline=0&portrait=0" width="470" height="264" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowFullScreen="true"></iframe>
                             </div>
                             <img src={siBeforeAfter} style={{ maxWidth: '100%' }} alt="Small Improvements before and after" />
                         </div>
