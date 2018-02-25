@@ -1,14 +1,15 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import Inner from '../../components/Section/Inner';
-import Heading from '../../components/Heading';
 import ProfileBubble from '../../components/ProfileBubble';
 import styles from './style.less';
-
+import {LINKS} from '../constants';
 export default function Home({ className, children }) {
     return <section className={styles.container}>
         <Inner className={styles.inner}>
-            <Heading>I’m a UI Designer, Front End Developer and Design Team Coordinator.</Heading>
-            <p className={styles.subHeading}>I like people, technology,  creative projects and building stuff.</p>
+            <h1>I’m a UI Designer, Front End Developer and Design Team Coordinator.</h1>
+            <p className={styles.subHeading}>I like people, technology, creativity and building things.</p>
+            <Link to={LINKS.WORK}>See my work</Link>
             <div className={styles.bubbleContainer}>
                 <span className={styles.greeting}><span role="img" className={styles.emoji} aria-label="Waving emoji">👋</span> Hi there!</span>
                 <ProfileBubble />

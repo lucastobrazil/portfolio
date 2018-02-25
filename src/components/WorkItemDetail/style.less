@@ -32,7 +32,7 @@
     }
 
     h2 {
-        font-size: @fontSizeS;
+        font-size: @fontSize;
         text-transform: uppercase;
         font-family: @fontFamilySansSerif;
         margin: 0;
@@ -63,10 +63,10 @@
             flex-wrap: wrap;
         });
 
-        img {
-            width: 100%;
-            max-width: 470px;
-        }
+        // img {
+        //     width: 100%;
+        //     max-width: 470px;
+        // }
 
     }
 
@@ -105,5 +105,22 @@
 
     &:hover {
         opacity: 1;
+    }
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+
+    iframe {
+        margin-bottom: .5rem;
+    }
+}
+
+.toolsContainer {
+    display: flex;
+    margin: 0 -1rem;
+    img {
+        padding: .5rem 1rem;
     }
 }

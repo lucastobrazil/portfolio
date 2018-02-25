@@ -1,30 +1,57 @@
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import ImageWithCaption from '../../components/ImageWithCaption';
-import Image from '../../components/Section/Image';
-import anchormanPreview from './images/anchorman-preview.jpg';
-import anchormanScreen from './images/anchorman-cms.jpg';
+import Image from '../../components/Image';
 import { ROLES, LINKS } from '../../pages/constants';
 
 import channelsPreview from './images/channels-preview.jpg';
-import chimpanzeePreview from './images/chimpanee-preview.jpg';
 import hhrPreview from './images/hhr-preview.jpg';
-import vacationScreen from './images/heavenhr-vacation.png';
 import mmnAdvertising from './images/mmn-screen.jpg';
 import mmnHome from './images/mmn-home.png';
-import mmnJobArt from './images/mmn-jobArt.png';
 import mmnPreview from './images/mmn-preview.png';
 import cddjPreview from './images/cddj-preview.png';
-import nmvPrintPreview from './images/nmv-print-preview.jpg';
 import nightlifePreview from './images/nightlife-preview.jpg';
-import nmWebsiteBlocks from './images/nm-website-blocks.jpg';
+
+import nmGoodNightOut from './images/nm-goodnightout.jpg';
+import nmSummer from './images/nm-summer.jpg';
+import nmVenueSound from './images/nm-venue-sound.jpg';
+import mnWebsiteHome1 from './images/nm-website-home-1.png';
+import mnWebsiteHome2 from './images/nm-website-home-2.png';
+import mnWebsiteWwd from './images/nm-website-wwd.png';
+
+
+import mmnIos from './images/mmn-ios.png';
+import mmnIosPlaylist from './images/mmn-ios-playlist.png';
+import mmnIosVideo from './images/mmn-ios-video.png';
+import mmnIosVol from './images/mmn-ios-vol.png';
+import mmnLogo from './images/mmn-logo.jpg';
+import mmnPlaylist from './images/mmn-playlist.png';
+import mmnOverlay from './images/mmn-playlist-overlay.png';
+import mmnWebLogin from './images/mmn-web-login.jpg';
+import mmnWebDa from './images/mmn-web-da.jpg';
+
+import cdjHey from './images/cdj-hey.png';
+import cdjMap from './images/cdj-map.png';
+import cdjPlaylist from './images/cdj-playlist.png';
+
 import crowdDjLogo from './images/crowdDJ-logo.jpg';
+
 import activityStream from './images/si-activity-stream.png';
 import meetingsImage from './images/si-meetingnote.png';
+import meetingsDashboard from './images/si-meetings-dashboard.png';
+import meetingsGif from './images/si-checkable-item.gif';
+
 import siPreview from './images/si-preview.png';
 import styleGuide from './images/si-styleguide.png';
+import styleGuideComment from './images/si-comment.png';
+import styleGuideLCI from './images/si-loading-content-indicator.png';
 import siBeforeAfter from './images/siBeforeAfter.png';
+import siAs from './images/si-as.png';
+import siAsWhole from './images/si-as-whole.png';
 
+import adlChannels from './images/adl-channels.jpg';
+import adlOliveCaves from './images/adl-olive-caves.jpg';
+import adlNsp from './images/adl-nsp.jpg';
+import adlBts from './images/adl-bts.jpg';
 export const workItemMiniData = [
     {
         title: 'react-with-animation',
@@ -77,7 +104,13 @@ export default {
                     body:
                         <ul>
                             <li>Created album artwork using sculpture, paper, photography and lighting</li>
-                        </ul>
+                        </ul>,
+                    gallery:
+                        <Fragment>
+                            <Image src={adlChannels} alt="Artwork for the Channels EP" />
+                            <Image src={adlOliveCaves} alt="Artwork for the Olive Caves EP" />
+                            <Image src={adlNsp} alt="Artwork for the Naturestrip EP" />
+                        </Fragment>
                 },
                 {
                     title: 'Video',
@@ -86,15 +119,13 @@ export default {
                         <ul>
                             <li>Set design and storyboarding for “Chimpanzee” music video</li>
                             <li>Art direction for experimental visuals using cameras, bubbles, oils and water</li>
-                        </ul>
-                },
-                {
-                    title: 'Tour posters',
-                    altBg: true,
-                    body:
-                        <ul>
-                            <li>Graphic and print design</li>
-                        </ul>
+                        </ul>,
+                    gallery:
+                        <Fragment>
+                            <iframe title="Chimpanzee Music Video" width="560" height="315" src="https://www.youtube.com/embed/ZGodcPuO7-Y?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
+                            <Image src={adlBts} alt="Behind the scenes" />
+                            <iframe title="Experimental art" src="https://player.vimeo.com/video/40588009?color=4777ff&title=0&byline=0&portrait=0" width="470" height="264" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        </Fragment>
                 },
             ]
         }
@@ -127,14 +158,15 @@ export default {
             sections: [
                 {
                     title: 'Vacation Management',
-                    altBg: false,
+                    altBg: true,
                     body:
+                        <ul>
+                            <li>Helped build pages with Ajax requests instead of full page reloads after each change.</li>
+                            <li>Implemented inline editing of tables</li>
+                        </ul>,
+                    gallery:
                         <Fragment>
-                            <ul>
-                                <li>Helped build pages with Ajax requests instead of full page reloads after each change.</li>
-                                <li>Implemented inline editing of tables</li>
-                            </ul>
-                            <ImageWithCaption src={vacationScreen} caption="Vacation Management - a feature I built and assisted with the design" />
+                            <Image src={hhrPreview} caption="Vacation Management - a feature I built and assisted with the design" />
                         </Fragment>
                 },
             ]
@@ -150,7 +182,6 @@ export default {
             backgroundImage: `url(${cddjPreview})`,
         },
         modalContent: {
-            jobArt: cddjPreview,
             jobDescription: 'CrowdDJ is a mobile jukebox app that lets users inside a bar, pub or club directly interact with the music system. They can find out the current song playing, see what\'s up next, and queue up their favourite songs. ',
             jobOverview: {
                 team: 'I worked as a UI designer and developer alongside one native iOS / Android developer.',
@@ -171,7 +202,14 @@ export default {
                             <li>Users can check-in to a venue and instantly interact with its music playlist</li>
                             <li>Participating venues’ logos are added as branding in the app</li>
                             <li>Users can connect CrowdDJ to Spotify and add songs they like to their own playlists</li>
-                        </ul>
+                        </ul>,
+                    gallery:
+                        <Fragment>
+                            <Image src={cdjHey} />
+                            <Image src={cdjMap} />
+                            <Image src={cdjPlaylist} />
+                            <Image src={crowdDjLogo} />
+                        </Fragment>
                 }
             ]
         }
@@ -186,7 +224,7 @@ export default {
             backgroundImage: `url(${mmnPreview})`,
         },
         modalContent: {
-            jobArt: mmnJobArt,
+            jobArt: mmnIos,
             jobDescription: <Fragment><p>ManageMyNightlife (MMN) is an iOS, Android and Web app for venue managers of venues that use the <a href="http://www.nightlife.com.au" target="_blank">Nightlife Music</a> video playback system. The system outputs music videos and advertising onto the TV screens around the venue.</p><p>In the past, managers interacted with the system directly via a very old interface. MMN was created as a new front end  that communicated with the system via a new REST API. </p></Fragment>,
             jobOverview: {
                 team: 'I worked as designer and front end developer alongside a team of 5 other full-stack developers.',
@@ -202,20 +240,31 @@ export default {
                     title: 'App Design and Style',
                     altBg: true,
                     body:
+                        <p>Working with with three back-end developers, I created the UI across all platforms, as well as getting ‘hands on’ in the code. After release, I made improvements to the UX ongoing as we discovered how users were interacting with the app via user feedback.</p>,
+                    gallery:
                         <Fragment>
-                            <p>Working with with three back-end developers, I created the UI across all platforms, as well as getting ‘hands on’ in the code. After release, I made improvements to the UX ongoing as we discovered how users were interacting with the app via user feedback.</p>
-                            <ImageWithCaption src={mmnHome} caption="ManageMyNightlife - song view sceren" />
+                            <Image src={mmnIos} caption="ManageMyNightlife - song view sceren" />
+                            <Image src={mmnIosPlaylist} caption="ManageMyNightlife - song view sceren" />
+                            <Image src={mmnIosVideo} caption="ManageMyNightlife - song view sceren" />
+                            <Image src={mmnIosVol} caption="ManageMyNightlife - song view sceren" />
+                            <Image src={mmnHome} caption="ManageMyNightlife - song view sceren" />
+                            <Image src={mmnOverlay} caption="ManageMyNightlife - song view sceren" />
+                            <Image src={mmnWebLogin} caption="ManageMyNightlife - song view sceren" />
+                            <Image src={mmnLogo} caption="ManageMyNightlife - song view sceren" />
                         </Fragment>
                 }, {
                     title: 'Advertising Platform',
                     altBg: false,
                     body:
+                        <ul>
+                            <li>Users can manage advertising content that is displayed on TV screens in a venue.</li>
+                            <li>I designed and developed an interface to let users create their own &#39;Text-over-image&#39; advertisements in the browser</li>
+                        </ul>,
+                    gallery:
                         <Fragment>
-                            <ul>
-                                <li>Users can manage advertising content that is displayed on TV screens in a venue.</li>
-                                <li>I designed and developed an interface to let users create their own &#39;Text-over-image&#39; advertisements in the browser</li>
-                            </ul>
-                            <ImageWithCaption src={mmnAdvertising} caption="Advertising file management for ManageMyNightlife" />
+                            <Image src={mmnAdvertising} caption="Advertising file management for ManageMyNightlife" />
+                            <Image src={mmnWebDa} caption="ManageMyNightlife - song view sceren" />
+                            <iframe src="https://player.vimeo.com/video/257383148?color=4777ff&title=0&byline=0&portrait=0" width="470" height="378" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                         </Fragment>
                 },
             ]
@@ -223,12 +272,12 @@ export default {
     },
     NM: {
         title: 'Nightlife Music',
-        role: ROLES.PRINT_ANIMATION,
+        role: ROLES.WEB_DESIGN,
         year: '2009 - 2015',
-        linkUrl: LINKS.NMP,
+        linkUrl: LINKS.NM,
         style: {
             backgroundColor: '#36CF75',
-            backgroundImage: `url(${nmvPrintPreview})`,
+            backgroundImage: `url(${nightlifePreview})`,
         },
         modalContent: {
             jobDescription: 'I designed the Corporate website for Nightlife Music and many magazine advertising campaigns for Australian national publications.',
@@ -252,7 +301,13 @@ export default {
                             <li>Creating content to add to a Wordpress theme</li>
                             <li>Exporting images and optimizing video</li>
                             <li>Developing a custom Twitter widget on the home page</li>
-                        </ul>
+                        </ul>,
+                    gallery:
+                        <Fragment>
+                            <Image src={mnWebsiteHome1} caption="ManageMyNightlife - song view sceren" />
+                            <Image src={mnWebsiteHome2} caption="ManageMyNightlife - song view sceren" />
+                            <Image src={mnWebsiteWwd} caption="ManageMyNightlife - song view sceren" />
+                        </Fragment>
                 },
                 {
                     title: 'Print Design',
@@ -262,7 +317,13 @@ export default {
                             <li>Creative direction and concept design</li>
                             <li>Designing layouts and assets</li>
                             <li>Preparing designs for offset printing</li>
-                        </ul>
+                        </ul>,
+                    gallery:
+                        <Fragment>
+                            <Image src={nmGoodNightOut} caption="ManageMyNightlife - song view sceren" />
+                            <Image src={nmSummer} caption="ManageMyNightlife - song view sceren" />
+                            <Image src={nmVenueSound} caption="ManageMyNightlife - song view sceren" />
+                        </Fragment>
                 },
             ]
         },
@@ -280,7 +341,13 @@ export default {
         modalContent: {
             jobDescription: 'Small Improvements is a web-based feedback tool where companies and their staff can conduct 360º feedback rounds, set objectives, conduct 1:1 meetings, give praise / kudos and write formal performance reviews.',
             jobOverview: {
-                team: <Fragment>We worked in cross-functional teams consisting of one designer and two full-stack developers. Across teams, all designers met as a ‘meta team’ - my role also included coordination of desk tasks and having one-on-one meetings with team members (<Link to="/leadership">see more about my experience in leadership</Link>).</Fragment>,
+                team:
+                    <p>
+                        We worked in cross-functional teams consisting of one designer and two full-stack developers.
+                        Across teams, all designers met as a ‘meta team’ - my role also included coordination of design tasks
+                        and having one-on-one meetings with team members (<Link to="/leadership">see more about my
+                        experience in leadership</Link>).
+                    </p>,
                 tasks:
                     <ul>
                         <li>Steer the overall design of the product</li>
@@ -296,58 +363,66 @@ export default {
             tools: ['sketch', 'invision', 'less', 'react', 'angular', 'webpack', 'slack', 'confluence'],
             sections: [
                 {
-                    title: 'Activity Stream',
+                    title: '1:1  Meetings',
                     altBg: true,
                     body:
+                        <ul>
+                            <li>The latest feature at Small Improvements, designed as a place to keep track of your 1:1 meetings</li>
+                            <li>Both participants can prepare an agenda (Talking Points) and add notes afterwards</li>
+                            <li>Designed UI for individual meetings, dashboard and meetings ‘space’ where users can see all of their meetings</li>
+                        </ul>,
+                    gallery:
                         <Fragment>
-                            <ul>
-                                <li>In an effort to increase transparency and engagement within the tool, we created an Activity Stream to present recent happenings.</li>
-                                <li>I designed the UI of many content items</li>
-                                <li>Created detailed specifications of how content would be aggregated and the different edge cases that can occur</li>
-                            </ul>
-                            <ImageWithCaption src={activityStream} caption="A preview of some of the 'Content Items' shown in the activity stream." />
+                            <Image src={meetingsDashboard} alt="1:1 Meeting dashboard in Small Improvements." />
+                            <Image src={meetingsImage} alt="A 1:1 Meeting in Small Improvements." />
+                            <Image src={meetingsGif} alt="Checkable talking points." />
                         </Fragment>
                 },
                 {
-                    title: '1:1  Meetings',
+                    title: 'Activity Stream',
                     altBg: false,
                     body:
+                        <ul>
+                            <li>In an effort to increase transparency and engagement within the tool, we created an Activity Stream to present recent happenings.</li>
+                            <li>I designed the UI of many content items</li>
+                            <li>Created detailed specifications of how content would be aggregated and the different edge cases that can occur</li>
+                        </ul>,
+                    gallery:
                         <Fragment>
-                            <ul>
-                                <li>The latest feature at Small Improvements, designed as a place to keep track of your 1:1 meetings</li>
-                                <li>Both participants can prepare an agenda (Talking Points) and add notes afterwards</li>
-                                <li>Designed UI for individual meetings, dashboard and meetings ‘space’ where users can see all of their meetings</li>
-                            </ul>
-                            <ImageWithCaption src={meetingsImage} caption="A 1:1 Meeting in Small Improvements." />
+                            <Image src={siAsWhole} caption="A preview of some of the 'Content Items' shown in the activity stream." />
+                            <Image src={activityStream} caption="A preview of some of the 'Content Items' shown in the activity stream." />
+                            <Image src={siAs} caption="A preview of some of the 'Content Items' shown in the activity stream." />
                         </Fragment>
                 },
                 {
                     title: 'Living Style Guide',
                     altBg: true,
                     body:
+                        <ul>
+                            <li>Organised our components into a design system. The living style guide was built to document the components and UI patterns used within the tool and also to develop a vision for the future.</li>
+                            <li>Acted as an advocate for using it and encouraged devs to proactively document new components</li>
+                            <li>It also turned out to be quite a pleasant place to develop new components in isolation.</li>
+                        </ul>,
+                    gallery:
                         <Fragment>
-                            <ul>
-                                <li>Organised our components into a design system. The living style guide was built to document the components and UI patterns used within the tool and also to develop a vision for the future.</li>
-                                <li>Acted as an advocate for using it and encouraged devs to proactively document new components</li>
-                                <li>It also turned out to be quite a pleasant place to develop new components in isolation.</li>
-                            </ul>
-                            <ImageWithCaption src={styleGuide} caption="The Small Improvements style guide documenting our design patterns." />
+                            <Image src={styleGuide} caption="The Small Improvements style guide documenting our design patterns." />
+                            <Image src={styleGuideComment} caption="A comment component in the SI style guide." />
+                            <Image src={styleGuideLCI} caption="A loading content indicator in the SI style guide" />
                         </Fragment>
                 },
                 {
                     title: 'Responsive overhaul and style updates',
                     body:
-                        <div>
-                            <div style={{ display: 'flex' }}>
-                                <ul>
-                                    <li>When I joined, we were in the process of converting the SI app to be mobile-responsive.</li>
-                                    <li>We took this opportunity to rethink and refactor a lot of the code to follow a consistent pattern and structure.</li>
-                                    <li>This also meant an opportunity to update the style of many components (well, basically all of them!)</li>
-                                </ul>
-                                <iframe title="Video of me at Small Improvements" src="https://player.vimeo.com/video/180569819?color=4777ff&title=0&byline=0&portrait=0" width="470" height="264" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowFullScreen="true"></iframe>
-                            </div>
-                            <img src={siBeforeAfter} style={{ maxWidth: '100%' }} alt="Small Improvements before and after" />
-                        </div>
+                        <ul>
+                            <li>When I joined, we were in the process of converting the SI app to be mobile-responsive.</li>
+                            <li>We took this opportunity to rethink and refactor a lot of the code to follow a consistent pattern and structure.</li>
+                            <li>This also meant an opportunity to update the style of many components (well, basically all of them!)</li>
+                        </ul>,
+                    gallery:
+                        <Fragment>
+                            <iframe title="Video of me at Small Improvements" src="https://player.vimeo.com/video/180569819?color=4777ff&title=0&byline=0&portrait=0" width="470" height="264" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowFullScreen="true"></iframe>
+                            <Image src={siBeforeAfter} style={{maxWidth: '100%'}} alt="Small Improvements before and after" />
+                        </Fragment>
                 },
             ]
         }

@@ -1,6 +1,6 @@
 import React from 'react';
 import Section from '../../components/Section';
-import Image from '../../components/Section/Image';
+import Image from '../../components/Image';
 import meTeam from './images/me_team.jpg';
 import styles from './style.less';
 

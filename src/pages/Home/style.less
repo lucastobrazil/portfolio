@@ -4,23 +4,46 @@
 .inner {
     padding: @basePadding;
     padding-top: (@basePadding * 2);
-    // height: 100vh;
+
+    h1 {
+        max-width: 640px;
+    }
+    a {
+        display: inline-block;
+        text-decoration: none;
+        margin-top: 20px;
+        background-color: @primaryColor;
+        padding: 10px 20px;
+        border-radius: 40px;
+        &, &:visited {
+            color: white;
+        }
+
+        &:hover {
+            background: darken(@primaryColor, 5);
+        }
+    }
 }
 
 .container {
-    // background-color: @primaryColor;
     padding: 0;
-    // color: @white;
-    // border-top: 10px solid darken(@primaryColor, 5);
-    // margin-top: 80px;
 }
 
 .subHeading {
-    max-width: 415px;
+    max-width: 440px;
+
+    .widthMax(S, {
+        max-width: 200px;
+    });
 }
 
 .bubbleContainer {
     position: relative;
+
+    .widthMax(XS, {
+        margin-top: 120px;
+    });
+
     .greeting,
     img {
         position: absolute;
@@ -28,10 +51,11 @@
 
     .greeting {
         font-family: @fontFamilySansSerif;
-        right: 200px;
+        right: 180px;
         font-size: @fontSizeS;
         text-transform: uppercase;
         margin-top: -3em;
+        color: @subduedText;
     }
     img {
         right: 0;
