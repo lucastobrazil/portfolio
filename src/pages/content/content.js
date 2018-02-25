@@ -14,9 +14,9 @@ import nightlifePreview from './images/nightlife-preview.jpg';
 import nmGoodNightOut from './images/nm-goodnightout.jpg';
 import nmSummer from './images/nm-summer.jpg';
 import nmVenueSound from './images/nm-venue-sound.jpg';
-import mnWebsiteHome1 from './images/nm-website-home-1.png';
-import mnWebsiteHome2 from './images/nm-website-home-2.png';
-import mnWebsiteWwd from './images/nm-website-wwd.png';
+import mnWebsiteHome1 from './images/nm-website-home-1.jpg';
+import mnWebsiteHome2 from './images/nm-website-home-2.jpg';
+import mnWebsiteWwd from './images/nm-website-wwd.jpg';
 
 
 import mmnIos from './images/mmn-ios.png';

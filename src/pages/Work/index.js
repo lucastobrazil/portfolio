@@ -18,7 +18,7 @@ export default function Work() {
             <WorkItemsGrid />
         </div>
 
-        <h2>Some other development projects:</h2>
+        <h2>Some other development projects</h2>
         {workItemMiniData.map((itemProps, i) => <WorkItemMini {...itemProps} key={i} />)}
     </Section>;
 }

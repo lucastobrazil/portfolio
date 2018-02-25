@@ -6,7 +6,7 @@
 .workItemGrid {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: @basePadding;
+    margin-bottom: @basePadding * 2;
 
     .widthMin(XS, {
         margin-left: -@itemSpacing;
@@ -21,9 +21,8 @@
             padding-bottom: (@itemSpacing * 2);
         });
 
-        .widthMin(XS, {
+        .widthMin(S, {
             flex-shrink: 1;
-            // flex-basis: 45%;
             flex-basis: 290px;
             padding: @itemSpacing;
         });
