@@ -10,13 +10,22 @@
 .textImage {
     display: flex;
     align-items: flex-start;
+    img {
+        max-width: 40%;
+        margin-left: 20px;
+    }
     .widthMax(S, {
         flex-wrap: wrap;
+        img {
+            max-width: 100%;
+            margin: 0;
+
+        }
     });
 
     .widthMin(M, {
+        // max-width: 100%;
         img {
-            margin-left: 20px;
         }
     })
 }

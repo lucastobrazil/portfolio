@@ -226,7 +226,7 @@ export default {
             backgroundImage: `url(${mmnPreview})`,
         },
         modalContent: {
-            jobArt: mmnIos,
+            // jobArt: mmnIos,
             jobDescription: <Fragment><p>ManageMyNightlife (MMN) is an iOS, Android and Web app for venue managers of venues that use the <a href="http://www.nightlife.com.au" target="_blank">Nightlife Music</a> video playback system. The system outputs music videos and advertising onto the TV screens around the venue.</p><p>In the past, managers interacted with the system directly via a very old interface. MMN was created as a new front end  that communicated with the system via a new REST API. </p></Fragment>,
             jobOverview: {
                 team: 'I worked as designer and front end developer alongside a team of 5 other full-stack developers.',
@@ -245,14 +245,14 @@ export default {
                         <p>Working with with three back-end developers, I created the UI across all platforms, as well as getting ‘hands on’ in the code. After release, I made improvements to the UX ongoing as we discovered how users were interacting with the app via user feedback.</p>,
                     gallery:
                         <Gallery>
-                            <GalleryItem src={mmnIos} caption="ManageMyNightlife - song view sceren" />
-                            <GalleryItem src={mmnIosPlaylist} caption="ManageMyNightlife - song view sceren" />
-                            <GalleryItem src={mmnIosVideo} caption="ManageMyNightlife - song view sceren" />
-                            <GalleryItem src={mmnIosVol} caption="ManageMyNightlife - song view sceren" />
-                            <GalleryItem src={mmnHome} caption="ManageMyNightlife - song view sceren" />
-                            <GalleryItem src={mmnOverlay} caption="ManageMyNightlife - song view sceren" />
-                            <GalleryItem src={mmnWebLogin} caption="ManageMyNightlife - song view sceren" />
-                            <GalleryItem src={mmnLogo} caption="ManageMyNightlife - song view sceren" />
+                            <GalleryItem src={mmnIos} caption="ManageMyNightlife - song view screen" />
+                            <GalleryItem src={mmnIosPlaylist} caption="ManageMyNightlife - song view screen" />
+                            <GalleryItem src={mmnIosVideo} caption="ManageMyNightlife - song view screen" />
+                            <GalleryItem src={mmnIosVol} caption="ManageMyNightlife - song view screen" />
+                            <GalleryItem src={mmnHome} caption="ManageMyNightlife - song view screen" />
+                            <GalleryItem src={mmnOverlay} caption="ManageMyNightlife - song view screen" />
+                            <GalleryItem src={mmnWebLogin} caption="ManageMyNightlife - song view screen" />
+                            <GalleryItem src={mmnLogo} caption="ManageMyNightlife - song view screen" />
                         </Gallery>
                 }, {
                     title: 'Advertising Platform',
@@ -265,7 +265,7 @@ export default {
                     gallery:
                         <Fragment>
                             <GalleryItem src={mmnAdvertising} caption="Advertising file management for ManageMyNightlife" />
-                            <GalleryItem src={mmnWebDa} caption="ManageMyNightlife - song view sceren" />
+                            <GalleryItem src={mmnWebDa} caption="ManageMyNightlife - song view screen" />
                             <GalleryItem type="video"><iframe src="https://player.vimeo.com/video/257383148?color=4777ff&title=0&byline=0&portrait=0" width="470" height="378" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></GalleryItem>
                         </Fragment>
                 },
@@ -306,9 +306,9 @@ export default {
                         </ul>,
                     gallery:
                         <Gallery>
-                            <GalleryItem src={mnWebsiteHome1} caption="ManageMyNightlife - song view sceren" />
-                            <GalleryItem src={mnWebsiteHome2} caption="ManageMyNightlife - song view sceren" />
-                            <GalleryItem src={mnWebsiteWwd} caption="ManageMyNightlife - song view sceren" />
+                            <GalleryItem src={mnWebsiteHome1} caption="ManageMyNightlife - song view screen" />
+                            <GalleryItem src={mnWebsiteHome2} caption="ManageMyNightlife - song view screen" />
+                            <GalleryItem src={mnWebsiteWwd} caption="ManageMyNightlife - song view screen" />
                         </Gallery>
                 },
                 {
@@ -322,9 +322,9 @@ export default {
                         </ul>,
                     gallery:
                         <Gallery>
-                            <GalleryItem src={nmGoodNightOut} caption="ManageMyNightlife - song view sceren" />
-                            <GalleryItem src={nmSummer} caption="ManageMyNightlife - song view sceren" />
-                            <GalleryItem src={nmVenueSound} caption="ManageMyNightlife - song view sceren" />
+                            <GalleryItem src={nmGoodNightOut} caption="ManageMyNightlife - song view screen" />
+                            <GalleryItem src={nmSummer} caption="ManageMyNightlife - song view screen" />
+                            <GalleryItem src={nmVenueSound} caption="ManageMyNightlife - song view screen" />
                         </Gallery>
                 },
             ]

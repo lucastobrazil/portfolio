@@ -11,7 +11,7 @@ export default function AboutMe() {
         <div>
             <h1>{SECTIONS.ABOUT}</h1>
             <div className={styles.intro}>
-            <p>Hi, I’m Lucas! An Australian designer, developer and leader currently living in Berlin with my wife Claire and 6-month-old son Charlie. Together we all love life, people, travel, music, art and projects.</p>
+            <p>Hi, I’m Lucas! An Australian designer, developer and leader currently living in Berlin with my wife Claire and son Charlie. Together we all love life, people, travel, music, art and projects.</p>
             <ProfileBubble />
             </div>
             <p>Now, onto the professional stuff...</p>
