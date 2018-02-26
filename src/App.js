@@ -22,7 +22,7 @@ import {
 class App extends Component {
   render() {
     return (
-      <Router basename={process.env.PUBLIC_URL}>
+      <Router>
         <div>
           <Nav />
           <ScrollMemory />
@@ -39,6 +39,11 @@ class App extends Component {
 const AppContent = () => (
   <Switch>
     <Route exact path="/" component={Home} />
+
+    <Route exact path={`/${LINKS.WORK}`} component={Work} />
+    <Route exact path={`/${LINKS.LEADERSHIP}`} component={Leadership} />
+    <Route exact path={`/${LINKS.ABOUT}`} component={AboutMe} />
+
     <Route exact path={`/${LINKS.SI}`} component={SiPage} />
     <Route exact path={`/${LINKS.MMN}`} component={MmnPage} />
     <Route exact path={`/${LINKS.CDDJ}`} component={CddjPage} />
@@ -46,9 +51,6 @@ const AppContent = () => (
     <Route exact path={`/${LINKS.NM}`} component={NmPage} />
     <Route exact path={`/${LINKS.ADL}`} component={ArundelPage} />
 
-    <Route exact path={`/${LINKS.WORK}`} component={Work} />
-    <Route exact path={`/${LINKS.LEADERSHIP}`} component={Leadership} />
-    <Route exact path={`/${LINKS.ABOUT}`} component={AboutMe} />
   </Switch>
 );
 

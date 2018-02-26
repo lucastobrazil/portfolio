@@ -347,8 +347,8 @@ export default {
                     <p>
                         We worked in cross-functional teams consisting of one designer and two full-stack developers.
                         Across teams, all designers met as a ‘meta team’ - my role also included coordination of design tasks
-                        and having one-on-one meetings with team members (<Link to="/leadership">see more about my
-                        experience in leadership</Link>).
+                        and having one-on-one meetings with team members (you can <Link to="/leadership">read more about my
+                        experience in leadership</Link> here).
                     </p>,
                 tasks:
                     <ul>
