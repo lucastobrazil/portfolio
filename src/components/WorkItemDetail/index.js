@@ -49,9 +49,7 @@ function DetailBodySection({ title, altBg, body, gallery }) {
         <Section altBg={altBg} className={styles.section}>
             <h2>{title}</h2>
             <div className={styles.detailBody}>{body}</div>
-            <div className={styles.gallery}>
-                {gallery}
-            </div>
+            {gallery}
         </Section>
     )
 }

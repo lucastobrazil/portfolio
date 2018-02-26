@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import Image from '../../components/Image';
 import { ROLES, LINKS } from '../../pages/constants';
 
 import channelsPreview from './images/channels-preview.jpg';
@@ -52,6 +51,9 @@ import adlChannels from './images/adl-channels.jpg';
 import adlOliveCaves from './images/adl-olive-caves.jpg';
 import adlNsp from './images/adl-nsp.jpg';
 import adlBts from './images/adl-bts.jpg';
+
+import { Gallery, GalleryItem } from '../../components/Gallery';
+
 export const workItemMiniData = [
     {
         title: 'react-with-animation',
@@ -106,11 +108,11 @@ export default {
                             <li>Created album artwork using sculpture, paper, photography and lighting</li>
                         </ul>,
                     gallery:
-                        <Fragment>
-                            <Image src={adlChannels} alt="Artwork for the Channels EP" />
-                            <Image src={adlOliveCaves} alt="Artwork for the Olive Caves EP" />
-                            <Image src={adlNsp} alt="Artwork for the Naturestrip EP" />
-                        </Fragment>
+                        <Gallery>
+                            <GalleryItem src={adlChannels} alt="Artwork for the Channels EP" />
+                            <GalleryItem src={adlOliveCaves} alt="Artwork for the Olive Caves EP" />
+                            <GalleryItem src={adlNsp} alt="Artwork for the Naturestrip EP" />
+                        </Gallery>
                 },
                 {
                     title: 'Video',
@@ -121,11 +123,11 @@ export default {
                             <li>Art direction for experimental visuals using cameras, bubbles, oils and water</li>
                         </ul>,
                     gallery:
-                        <Fragment>
-                            <iframe title="Chimpanzee Music Video" width="560" height="315" src="https://www.youtube.com/embed/ZGodcPuO7-Y?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
-                            <Image src={adlBts} alt="Behind the scenes" />
-                            <iframe title="Experimental art" src="https://player.vimeo.com/video/40588009?color=4777ff&title=0&byline=0&portrait=0" width="470" height="264" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                        </Fragment>
+                        <Gallery>
+                            <GalleryItem><iframe title="Chimpanzee Music Video" width="560" height="315" src="https://www.youtube.com/embed/ZGodcPuO7-Y?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe></GalleryItem>
+                            <GalleryItem src={adlBts} alt="Behind the scenes" />
+                            <GalleryItem><iframe title="Experimental art" src="https://player.vimeo.com/video/40588009?color=4777ff&title=0&byline=0&portrait=0" width="470" height="264" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></GalleryItem>
+                        </Gallery>
                 },
             ]
         }
@@ -165,9 +167,9 @@ export default {
                             <li>Implemented inline editing of tables</li>
                         </ul>,
                     gallery:
-                        <Fragment>
-                            <Image src={hhrPreview} caption="Vacation Management - a feature I built and assisted with the design" />
-                        </Fragment>
+                        <Gallery>
+                            <GalleryItem src={hhrPreview} caption="Vacation Management - a feature I built and assisted with the design" />
+                        </Gallery>
                 },
             ]
         }
@@ -204,12 +206,12 @@ export default {
                             <li>Users can connect CrowdDJ to Spotify and add songs they like to their own playlists</li>
                         </ul>,
                     gallery:
-                        <Fragment>
-                            <Image src={cdjHey} />
-                            <Image src={cdjMap} />
-                            <Image src={cdjPlaylist} />
-                            <Image src={crowdDjLogo} />
-                        </Fragment>
+                        <Gallery>
+                            <GalleryItem src={cdjHey} />
+                            <GalleryItem src={cdjMap} />
+                            <GalleryItem src={cdjPlaylist} />
+                            <GalleryItem src={crowdDjLogo} />
+                        </Gallery>
                 }
             ]
         }
@@ -242,16 +244,16 @@ export default {
                     body:
                         <p>Working with with three back-end developers, I created the UI across all platforms, as well as getting ‘hands on’ in the code. After release, I made improvements to the UX ongoing as we discovered how users were interacting with the app via user feedback.</p>,
                     gallery:
-                        <Fragment>
-                            <Image src={mmnIos} caption="ManageMyNightlife - song view sceren" />
-                            <Image src={mmnIosPlaylist} caption="ManageMyNightlife - song view sceren" />
-                            <Image src={mmnIosVideo} caption="ManageMyNightlife - song view sceren" />
-                            <Image src={mmnIosVol} caption="ManageMyNightlife - song view sceren" />
-                            <Image src={mmnHome} caption="ManageMyNightlife - song view sceren" />
-                            <Image src={mmnOverlay} caption="ManageMyNightlife - song view sceren" />
-                            <Image src={mmnWebLogin} caption="ManageMyNightlife - song view sceren" />
-                            <Image src={mmnLogo} caption="ManageMyNightlife - song view sceren" />
-                        </Fragment>
+                        <Gallery>
+                            <GalleryItem src={mmnIos} caption="ManageMyNightlife - song view sceren" />
+                            <GalleryItem src={mmnIosPlaylist} caption="ManageMyNightlife - song view sceren" />
+                            <GalleryItem src={mmnIosVideo} caption="ManageMyNightlife - song view sceren" />
+                            <GalleryItem src={mmnIosVol} caption="ManageMyNightlife - song view sceren" />
+                            <GalleryItem src={mmnHome} caption="ManageMyNightlife - song view sceren" />
+                            <GalleryItem src={mmnOverlay} caption="ManageMyNightlife - song view sceren" />
+                            <GalleryItem src={mmnWebLogin} caption="ManageMyNightlife - song view sceren" />
+                            <GalleryItem src={mmnLogo} caption="ManageMyNightlife - song view sceren" />
+                        </Gallery>
                 }, {
                     title: 'Advertising Platform',
                     altBg: false,
@@ -262,9 +264,9 @@ export default {
                         </ul>,
                     gallery:
                         <Fragment>
-                            <Image src={mmnAdvertising} caption="Advertising file management for ManageMyNightlife" />
-                            <Image src={mmnWebDa} caption="ManageMyNightlife - song view sceren" />
-                            <iframe src="https://player.vimeo.com/video/257383148?color=4777ff&title=0&byline=0&portrait=0" width="470" height="378" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                            <GalleryItem src={mmnAdvertising} caption="Advertising file management for ManageMyNightlife" />
+                            <GalleryItem src={mmnWebDa} caption="ManageMyNightlife - song view sceren" />
+                            <GalleryItem type="video"><iframe src="https://player.vimeo.com/video/257383148?color=4777ff&title=0&byline=0&portrait=0" width="470" height="378" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></GalleryItem>
                         </Fragment>
                 },
             ]
@@ -303,11 +305,11 @@ export default {
                             <li>Developing a custom Twitter widget on the home page</li>
                         </ul>,
                     gallery:
-                        <Fragment>
-                            <Image src={mnWebsiteHome1} caption="ManageMyNightlife - song view sceren" />
-                            <Image src={mnWebsiteHome2} caption="ManageMyNightlife - song view sceren" />
-                            <Image src={mnWebsiteWwd} caption="ManageMyNightlife - song view sceren" />
-                        </Fragment>
+                        <Gallery>
+                            <GalleryItem src={mnWebsiteHome1} caption="ManageMyNightlife - song view sceren" />
+                            <GalleryItem src={mnWebsiteHome2} caption="ManageMyNightlife - song view sceren" />
+                            <GalleryItem src={mnWebsiteWwd} caption="ManageMyNightlife - song view sceren" />
+                        </Gallery>
                 },
                 {
                     title: 'Print Design',
@@ -319,11 +321,11 @@ export default {
                             <li>Preparing designs for offset printing</li>
                         </ul>,
                     gallery:
-                        <Fragment>
-                            <Image src={nmGoodNightOut} caption="ManageMyNightlife - song view sceren" />
-                            <Image src={nmSummer} caption="ManageMyNightlife - song view sceren" />
-                            <Image src={nmVenueSound} caption="ManageMyNightlife - song view sceren" />
-                        </Fragment>
+                        <Gallery>
+                            <GalleryItem src={nmGoodNightOut} caption="ManageMyNightlife - song view sceren" />
+                            <GalleryItem src={nmSummer} caption="ManageMyNightlife - song view sceren" />
+                            <GalleryItem src={nmVenueSound} caption="ManageMyNightlife - song view sceren" />
+                        </Gallery>
                 },
             ]
         },
@@ -372,11 +374,11 @@ export default {
                             <li>Designed UI for individual meetings, dashboard and meetings ‘space’ where users can see all of their meetings</li>
                         </ul>,
                     gallery:
-                        <Fragment>
-                            <Image src={meetingsDashboard} alt="1:1 Meeting dashboard in Small Improvements." />
-                            <Image src={meetingsImage} alt="A 1:1 Meeting in Small Improvements." />
-                            <Image src={meetingsGif} alt="Checkable talking points." />
-                        </Fragment>
+                        <Gallery>
+                            <GalleryItem src={meetingsDashboard} alt="1:1 Meeting dashboard in Small Improvements." />
+                            <GalleryItem src={meetingsImage} alt="A 1:1 Meeting in Small Improvements." />
+                            <GalleryItem src={meetingsGif} alt="Checkable talking points." />
+                        </Gallery>
                 },
                 {
                     title: 'Activity Stream',
@@ -388,11 +390,11 @@ export default {
                             <li>Created detailed specifications of how content would be aggregated and the different edge cases that can occur</li>
                         </ul>,
                     gallery:
-                        <Fragment>
-                            <Image src={siAsWhole} caption="A preview of some of the 'Content Items' shown in the activity stream." />
-                            <Image src={activityStream} caption="A preview of some of the 'Content Items' shown in the activity stream." />
-                            <Image src={siAs} caption="A preview of some of the 'Content Items' shown in the activity stream." />
-                        </Fragment>
+                        <Gallery>
+                            <GalleryItem src={siAsWhole} caption="A preview of some of the 'Content Items' shown in the activity stream." />
+                            <GalleryItem src={activityStream} caption="A preview of some of the 'Content Items' shown in the activity stream." />
+                            <GalleryItem src={siAs} caption="A preview of some of the 'Content Items' shown in the activity stream." />
+                        </Gallery>
                 },
                 {
                     title: 'Living Style Guide',
@@ -404,11 +406,11 @@ export default {
                             <li>It also turned out to be quite a pleasant place to develop new components in isolation.</li>
                         </ul>,
                     gallery:
-                        <Fragment>
-                            <Image src={styleGuide} caption="The Small Improvements style guide documenting our design patterns." />
-                            <Image src={styleGuideComment} caption="A comment component in the SI style guide." />
-                            <Image src={styleGuideLCI} caption="A loading content indicator in the SI style guide" />
-                        </Fragment>
+                        <Gallery>
+                            <GalleryItem src={styleGuide} caption="The Small Improvements style guide documenting our design patterns." />
+                            <GalleryItem src={styleGuideComment} caption="A comment component in the SI style guide." />
+                            <GalleryItem src={styleGuideLCI} caption="A loading content indicator in the SI style guide" />
+                        </Gallery>
                 },
                 {
                     title: 'Responsive overhaul and style updates',
@@ -419,10 +421,10 @@ export default {
                             <li>This also meant an opportunity to update the style of many components (well, basically all of them!)</li>
                         </ul>,
                     gallery:
-                        <Fragment>
-                            <iframe title="Video of me at Small Improvements" src="https://player.vimeo.com/video/180569819?color=4777ff&title=0&byline=0&portrait=0" width="470" height="264" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowFullScreen="true"></iframe>
-                            <Image src={siBeforeAfter} style={{maxWidth: '100%'}} alt="Small Improvements before and after" />
-                        </Fragment>
+                        <Gallery>
+                            <GalleryItem type="video"><iframe title="Video of me at Small Improvements" src="https://player.vimeo.com/video/180569819?color=4777ff&title=0&byline=0&portrait=0" width="470" height="264" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowFullScreen="true"></iframe></GalleryItem>
+                            <GalleryItem style={{width: '100%'}} src={siBeforeAfter}  alt="Small Improvements before and after" />
+                        </Gallery>
                 },
             ]
         }
