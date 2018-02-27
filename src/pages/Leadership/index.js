@@ -9,19 +9,21 @@ export default function Leadership() {
         <h1>Leadership</h1>
         <div className={styles.textImage}>
             <span>
-                <p>I like to think of a team as an orchestra - where each team member represents an individual player and together, we can perform powerful and awesome music. In recent years, I’ve discovered my love of playing the role of the conductor. </p>
-                <p>From coordinating weekly design tasks to conducting one-on-one meetings with team members, I am passionate about servant leadership and facilitating the success of the personal growth goals of my colleagues.</p>
+                <p>I believe a team is analogous to an orchestra - each team member represents an instrument, and together we perform beautiful music. </p>
+                <p>The beauty and impact of the music often relies on the skills of the conductor - leading and guiding the team to greatness. In recent years, I’ve discovered my natural ability and real passion for stepping into the role of conductor, and supporting my team to create powerful results.</p>
+                <p>From coordinating weekly design tasks to conducting one-on-one meetings with team members, I am passionate about servant leadership and facilitating the success and personal growth goals of my colleagues.</p>
             </span>
             <Image src={meTeam} caption="Brainstorming with team members is something I love doing" />
         </div>
         <h2>Key Responsibilities</h2>
         <ul>
-            <li>Developing a small team of designers - offering advice and mentorship</li>
-            <li>Managing and coordinating weekly design tasks</li>
-            <li>Setting clear goals for projects and making suggestions for pragmatic approaches</li>
-            <li>Guiding the team to develop and communicate best practices and workflows</li>
-            <li>Connecting the right designers to the right projects</li>
-            <li>Onboarding new team members to get them up and running</li>
+            <li>fostering the development of a small team of designers, including supporting individuals with their goal setting, regular review of these goals vs performance, and ongoing career advice and mentor-ship </li>
+            <li>managing weekly design tasks and coordinating the team to meet and deliver these weekly targets</li>
+            <li>setting clear, SMART project goals, that adopt a pragmatic and client-focused approach</li>
+            <li>encouraging and facilitating communication of best practice sharing amongst the team and broader business</li>
+            <li>supporting the team to develop and stretch their own skill set through adopting best practices and, where it makes sense, trying different workflows</li>
+            <li>performing a key connector role across teams and the business to ensure the right talent is deployed on the right projects </li>
+            <li>onboarding all new team members to ensure they are quickly mobilized and deployed in roles that deliver value for our business and feel value additive and rewarding for the individual</li>
         </ul>
 
         <h2>Recruitment</h2>
