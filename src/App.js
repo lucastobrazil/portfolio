@@ -8,6 +8,7 @@ import Work from './pages/Work';
 import Leadership from './pages/Leadership';
 import AboutMe from './pages/AboutMe';
 import Footer from './pages/Footer';
+import Page404 from './pages/Page404';
 
 import { LINKS } from './pages/constants';
 import {
@@ -50,6 +51,8 @@ const AppContent = () => (
     <Route exact path={`/${LINKS.HHR}`} component={HhrPage} />
     <Route exact path={`/${LINKS.NM}`} component={NmPage} />
     <Route exact path={`/${LINKS.ADL}`} component={ArundelPage} />
+
+    <Route component={Page404} />
 
   </Switch>
 );
