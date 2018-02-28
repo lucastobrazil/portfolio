@@ -124,9 +124,9 @@ export default {
                         </ul>,
                     gallery:
                         <Gallery>
-                            <GalleryItem><iframe title="Chimpanzee Music Video" width="560" height="315" src="https://www.youtube.com/embed/ZGodcPuO7-Y?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe></GalleryItem>
+                            <GalleryItem type="video"><iframe title="Chimpanzee Music Video" width="560" height="315" src="https://www.youtube.com/embed/ZGodcPuO7-Y?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe></GalleryItem>
                             <GalleryItem src={adlBts} alt="Behind the scenes" />
-                            <GalleryItem><iframe title="Experimental art" src="https://player.vimeo.com/video/40588009?color=4777ff&title=0&byline=0&portrait=0" width="470" height="264" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></GalleryItem>
+                            <GalleryItem type="video"><iframe title="Experimental art" src="https://player.vimeo.com/video/40588009?color=4777ff&title=0&byline=0&portrait=0" width="470" height="264" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></GalleryItem>
                         </Gallery>
                 },
             ]
@@ -423,7 +423,7 @@ export default {
                     gallery:
                         <Gallery>
                             <GalleryItem type="video"><iframe title="Video of me at Small Improvements" src="https://player.vimeo.com/video/180569819?color=4777ff&title=0&byline=0&portrait=0" width="470" height="264" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowFullScreen="true"></iframe></GalleryItem>
-                            <GalleryItem style={{width: '100%'}} src={siBeforeAfter}  alt="Small Improvements before and after" />
+                            <GalleryItem style={{ width: '100%' }} src={siBeforeAfter} alt="Small Improvements before and after" />
                         </Gallery>
                 },
             ]
