@@ -23,7 +23,6 @@ import mmnIosPlaylist from './images/mmn-ios-playlist.png';
 import mmnIosVideo from './images/mmn-ios-video.png';
 import mmnIosVol from './images/mmn-ios-vol.png';
 import mmnLogo from './images/mmn-logo.jpg';
-import mmnPlaylist from './images/mmn-playlist.png';
 import mmnOverlay from './images/mmn-playlist-overlay.png';
 import mmnWebLogin from './images/mmn-web-login.jpg';
 import mmnWebDa from './images/mmn-web-da.jpg';
@@ -227,7 +226,7 @@ export default {
         },
         modalContent: {
             // jobArt: mmnIos,
-            jobDescription: <Fragment><p>ManageMyNightlife (MMN) is an iOS, Android and Web app for venue managers of venues that use the <a href="http://www.nightlife.com.au" target="_blank">Nightlife Music</a> video playback system. The system outputs music videos and advertising onto the TV screens around the venue.</p><p>In the past, managers interacted with the system directly via a very old interface. MMN was created as a new front end  that communicated with the system via a new REST API. </p></Fragment>,
+            jobDescription: <Fragment><p>ManageMyNightlife (MMN) is an iOS, Android and Web app for venue managers of venues that use the <a href="http://www.nightlife.com.au" target="_blank" rel="noopener noreferrer">Nightlife Music</a> video playback system. The system outputs music videos and advertising onto the TV screens around the venue.</p><p>In the past, managers interacted with the system directly via a very old interface. MMN was created as a new front end  that communicated with the system via a new REST API. </p></Fragment>,
             jobOverview: {
                 team: 'I worked as designer and front end developer alongside a team of 5 other full-stack developers.',
                 tasks:
@@ -266,7 +265,7 @@ export default {
                         <Fragment>
                             <GalleryItem src={mmnAdvertising} caption="Advertising file management for ManageMyNightlife" />
                             <GalleryItem src={mmnWebDa} caption="ManageMyNightlife - song view screen" />
-                            <GalleryItem type="video"><iframe src="https://player.vimeo.com/video/257383148?color=4777ff&title=0&byline=0&portrait=0" width="470" height="378" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></GalleryItem>
+                            <GalleryItem type="video"><iframe title="Advertising TOI Screen" src="https://player.vimeo.com/video/257383148?color=4777ff&title=0&byline=0&portrait=0" width="470" height="378" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></GalleryItem>
                         </Fragment>
                 },
             ]

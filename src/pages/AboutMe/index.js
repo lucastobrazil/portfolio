@@ -1,9 +1,7 @@
 import React from 'react';
 import Section from '../../components/Section';
-import Image from '../../components/Image';
 import ProfileBubble from '../../components/ProfileBubble';
 import { SECTIONS } from '../constants';
-import lucasPhoto from '../../components/ProfileBubble/lucas.jpg';
 import styles from './style.less';
 
 export default function AboutMe() {
@@ -11,8 +9,8 @@ export default function AboutMe() {
         <div>
             <h1>{SECTIONS.ABOUT}</h1>
             <div className={styles.intro}>
-            <p>Hi, I’m Lucas! An Australian designer, developer and leader currently living in Berlin with my wife Claire and son Charlie. Together we all love life, people, travel, music, art and projects.</p>
-            <ProfileBubble />
+                <p>Hi, I’m Lucas! An Australian designer, developer and leader currently living in Berlin with my wife Claire and son Charlie. Together we all love life, people, travel, music, art and projects.</p>
+                <ProfileBubble />
             </div>
             <p>Now, onto the professional stuff...</p>
             <p>My ten years of experience has covered a broad range of areas. From design and digital media production to HTML, CSS, native and JavaScript development, what I’ve learned about myself is that I love solving problems, working with people and using tools to build things.</p>

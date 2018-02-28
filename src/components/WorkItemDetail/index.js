@@ -1,8 +1,6 @@
-import React, { Component, Fragment } from 'react';
-import PropTypes from 'prop-types';
+import React, { Fragment } from 'react';
 import styles from './style.less';
 import ToolsIcon from '../ToolsIcon';
-import backIcon from './images/back_x.svg';
 import Image from '../Image';
 import Section from '../Section';
 import classNames from 'classnames';
