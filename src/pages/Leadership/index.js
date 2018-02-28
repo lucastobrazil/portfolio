@@ -29,11 +29,11 @@ export default function Leadership() {
         <h2>Recruitment</h2>
         <p>I’ve played an active role in connecting with and hiring outstanding, passionate and talented design professionals. When limited in resources, my approach is often to look for areas of skill that are lacking (but needed) in the team and to seek out specialists in that area. While juggling the day-to-day design responsibilities, my tasks have included:</p>
         <ul>
-            <li>Writing position descriptions</li>
-            <li>Proactively searching design communities and networks to reach out to designers</li>
-            <li>Conducting technical interviews</li>
-            <li>Designing trial work for successful interviewees to complete</li>
-            <li>Communicating constructive feedback to unsuccessful applicants</li>
+            <li>writing position descriptions</li>
+            <li>proactively searching design communities and networks to reach out to designers</li>
+            <li>conducting technical interviews</li>
+            <li>designing trial work for successful interviewees to complete</li>
+            <li>communicating constructive feedback to unsuccessful applicants</li>
         </ul>
     </Section>;
 }
