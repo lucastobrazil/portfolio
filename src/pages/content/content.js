@@ -124,7 +124,7 @@ export default {
                     gallery:
                         <Gallery>
                             <GalleryItem type="video"><iframe title="Chimpanzee Music Video" width="560" height="315" src="https://www.youtube.com/embed/ZGodcPuO7-Y?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe></GalleryItem>
-                            <GalleryItem src={adlBts} alt="Behind the scenes" />
+                            <GalleryItem src={adlBts} alt="Chimpanzee music video - Behind the scenes" />
                             <GalleryItem type="video"><iframe title="Experimental art" src="https://player.vimeo.com/video/40588009?color=4777ff&title=0&byline=0&portrait=0" width="470" height="264" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></GalleryItem>
                         </Gallery>
                 },
@@ -167,7 +167,7 @@ export default {
                         </ul>,
                     gallery:
                         <Gallery>
-                            <GalleryItem src={hhrPreview} caption="Vacation Management - a feature I built and assisted with the design" />
+                            <GalleryItem src={hhrPreview} alt="Vacation Management - a feature I built and assisted with the design" />
                         </Gallery>
                 },
             ]
@@ -206,10 +206,10 @@ export default {
                         </ul>,
                     gallery:
                         <Gallery>
-                            <GalleryItem src={cdjHey} />
-                            <GalleryItem src={cdjMap} />
-                            <GalleryItem src={cdjPlaylist} />
-                            <GalleryItem src={crowdDjLogo} />
+                            <GalleryItem src={cdjHey} alt="CrowdDJ welcome screen" />
+                            <GalleryItem src={cdjMap} alt="CrowdDJ map view" />
+                            <GalleryItem src={cdjPlaylist} alt="CrowdDJ playlist screen" />
+                            <GalleryItem src={crowdDjLogo} alt="CrowdDJ logo" />
                         </Gallery>
                 }
             ]
@@ -225,7 +225,6 @@ export default {
             backgroundImage: `url(${mmnPreview})`,
         },
         modalContent: {
-            // jobArt: mmnIos,
             jobDescription: <Fragment><p>ManageMyNightlife (MMN) is an iOS, Android and Web app for venue managers of venues that use the <a href="http://www.nightlife.com.au" target="_blank" rel="noopener noreferrer">Nightlife Music</a> video playback system. The system outputs music videos and advertising onto the TV screens around the venue.</p><p>In the past, managers interacted with the system directly via a very old interface. MMN was created as a new front end  that communicated with the system via a new REST API. </p></Fragment>,
             jobOverview: {
                 team: 'I worked as designer and front end developer alongside a team of 5 other full-stack developers.',
@@ -244,14 +243,14 @@ export default {
                         <p>Working with with three back-end developers, I created the UI across all platforms, as well as getting ‘hands on’ in the code. After release, I made improvements to the UX ongoing as we discovered how users were interacting with the app via user feedback.</p>,
                     gallery:
                         <Gallery>
-                            <GalleryItem src={mmnIos} caption="ManageMyNightlife - song view screen" />
-                            <GalleryItem src={mmnIosPlaylist} caption="ManageMyNightlife - song view screen" />
-                            <GalleryItem src={mmnIosVideo} caption="ManageMyNightlife - song view screen" />
-                            <GalleryItem src={mmnIosVol} caption="ManageMyNightlife - song view screen" />
-                            <GalleryItem src={mmnHome} caption="ManageMyNightlife - song view screen" />
-                            <GalleryItem src={mmnOverlay} caption="ManageMyNightlife - song view screen" />
-                            <GalleryItem src={mmnWebLogin} caption="ManageMyNightlife - song view screen" />
-                            <GalleryItem src={mmnLogo} caption="ManageMyNightlife - song view screen" />
+                            <GalleryItem src={mmnIos} alt="ManageMyNightlife - playlist screen" />
+                            <GalleryItem src={mmnIosPlaylist} alt="ManageMyNightlife - search screen" />
+                            <GalleryItem src={mmnIosVideo} alt="ManageMyNightlife - video output screen" />
+                            <GalleryItem src={mmnIosVol} alt="ManageMyNightlife - controls screen" />
+                            <GalleryItem src={mmnHome} alt="ManageMyNightlife - web playlist screen" />
+                            <GalleryItem src={mmnOverlay} alt="ManageMyNightlife - song modal screen" />
+                            <GalleryItem src={mmnWebLogin} alt="ManageMyNightlife - login screen" />
+                            <GalleryItem src={mmnLogo} alt="ManageMyNightlife - logo" />
                         </Gallery>
                 }, {
                     title: 'Advertising Platform',
@@ -263,8 +262,8 @@ export default {
                         </ul>,
                     gallery:
                         <Fragment>
-                            <GalleryItem src={mmnAdvertising} caption="Advertising file management for ManageMyNightlife" />
-                            <GalleryItem src={mmnWebDa} caption="ManageMyNightlife - song view screen" />
+                            <GalleryItem src={mmnAdvertising} alt="Advertising file management for ManageMyNightlife" />
+                            <GalleryItem src={mmnWebDa} alt="ManageMyNightlife - song view screen" />
                             <GalleryItem type="video"><iframe title="Advertising TOI Screen" src="https://player.vimeo.com/video/257383148?color=4777ff&title=0&byline=0&portrait=0" width="470" height="378" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></GalleryItem>
                         </Fragment>
                 },
@@ -305,9 +304,9 @@ export default {
                         </ul>,
                     gallery:
                         <Gallery>
-                            <GalleryItem src={mnWebsiteHome1} caption="ManageMyNightlife - song view screen" />
-                            <GalleryItem src={mnWebsiteHome2} caption="ManageMyNightlife - song view screen" />
-                            <GalleryItem src={mnWebsiteWwd} caption="ManageMyNightlife - song view screen" />
+                            <GalleryItem src={mnWebsiteHome1} alt="Nightlife Music website - home page" />
+                            <GalleryItem src={mnWebsiteHome2} alt="Nightlife Music website - alt home page" />
+                            <GalleryItem src={mnWebsiteWwd} alt="Nightlife Music website - what we do page" />
                         </Gallery>
                 },
                 {
@@ -321,9 +320,9 @@ export default {
                         </ul>,
                     gallery:
                         <Gallery>
-                            <GalleryItem src={nmGoodNightOut} caption="ManageMyNightlife - song view screen" />
-                            <GalleryItem src={nmSummer} caption="ManageMyNightlife - song view screen" />
-                            <GalleryItem src={nmVenueSound} caption="ManageMyNightlife - song view screen" />
+                            <GalleryItem src={nmGoodNightOut} alt="Nightlife Music advertisement for 'A great Night Out'" />
+                            <GalleryItem src={nmSummer} alt="Nightlife Music advertisement for 'Summer Entertainment'" />
+                            <GalleryItem src={nmVenueSound} alt="Nightlife Music advertisement for venue acoustics" />
                         </Gallery>
                 },
             ]
@@ -390,9 +389,9 @@ export default {
                         </ul>,
                     gallery:
                         <Gallery>
-                            <GalleryItem src={siAsWhole} caption="A preview of some of the 'Content Items' shown in the activity stream." />
-                            <GalleryItem src={activityStream} caption="A preview of some of the 'Content Items' shown in the activity stream." />
-                            <GalleryItem src={siAs} caption="A preview of some of the 'Content Items' shown in the activity stream." />
+                            <GalleryItem src={siAsWhole} alt="A preview of some of the 'Content Items' shown in the activity stream." />
+                            <GalleryItem src={activityStream} alt="A preview of some of the 'Content Items' shown in the activity stream." />
+                            <GalleryItem src={siAs} alt="A preview of some of the 'Content Items' shown in the activity stream." />
                         </Gallery>
                 },
                 {
@@ -406,9 +405,9 @@ export default {
                         </ul>,
                     gallery:
                         <Gallery>
-                            <GalleryItem src={styleGuide} caption="The Small Improvements style guide documenting our design patterns." />
-                            <GalleryItem src={styleGuideComment} caption="A comment component in the SI style guide." />
-                            <GalleryItem src={styleGuideLCI} caption="A loading content indicator in the SI style guide" />
+                            <GalleryItem src={styleGuide} alt="The Small Improvements style guide documenting our design patterns." />
+                            <GalleryItem src={styleGuideComment} alt="A comment component in the SI style guide." />
+                            <GalleryItem src={styleGuideLCI} alt="A loading content indicator in the SI style guide" />
                         </Gallery>
                 },
                 {
