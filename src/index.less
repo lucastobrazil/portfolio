@@ -2,37 +2,53 @@
 @import './styles/responsive-mixins.less';
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: @fontFamilySansSerif;
-  font-size: @fontSize;
-  color: @black;
+    margin: 0;
+    padding: 0;
+    font-family: @fontFamilySansSerif;
+    font-size: @fontSize;
+    color: @offBlack;
+    // background-color: #dfdbe5;
+    // background-color: #ffffff;
+    background-attachment: fixed;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23bbbbbb' fill-opacity='0.22' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+
+    .widthMax(XS, {
+        font-size: @fontSizeS;
+    });
 }
 
 a {
-  color: @primaryColor;
+    color: @primaryColor;
 }
 
 main {
-  margin-top: 80px;
+    margin-top: 80px;
 }
 
-p, ul {
-  line-height: 1.75;
-  letter-spacing: -.003em;
-  // font-family: @fontFamilySerif;
-  max-width: 640px;
+p,
+ul {
+    line-height: 1.75;
+    letter-spacing: -0.003em;
+    // font-family: @fontFamilySerif;
+    max-width: 640px;
 }
 
-
-h1, h2, h3 {
-  line-height: 1.5;
-  font-weight: @fontWeightBold;
+h1,
+h2,
+h3 {
+    line-height: 1.5;
+    font-weight: @fontWeightBold;
 }
 
 h1 {
-  font-size: @fontSizeL;
-  .widthMax(XS, {
-      font-size: (@fontSizeL * .8);
+    font-size: @fontSizeL;
+    .widthMax(XS, {
+      font-size: (@fontSizeL * 0.8);
   });
+}
+
+h2 {
+    .widthMax(XS, {
+        font-size: @fontSize;
+    });
 }

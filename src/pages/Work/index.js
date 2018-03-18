@@ -7,19 +7,21 @@ import { workItemMiniData } from '../../pages/content/content';
 
 import { SECTIONS } from '../constants';
 
-
-
 const WorkItemsGrid = () => workItems.map((item, i) => <Fragment key={i}>{item}</Fragment>);
 
+export const WorkItemsSection = () => (
+    <div className={styles.workItemGrid}>
+        <WorkItemsGrid />
+    </div>
+);
 export default function Work() {
-    return <Section altBg={true}>
-        <h1>{SECTIONS.WORK}</h1>
-        <div className={styles.workItemGrid}>
-            <WorkItemsGrid />
-        </div>
+    return (
+        <Section altBg={false}>
+            <h1>{SECTIONS.WORK}</h1>
+            <WorkItemsSection />
 
-        <h2>Some other development projects</h2>
-        {workItemMiniData.map((itemProps, i) => <WorkItemMini {...itemProps} key={i} />)}
-    </Section>;
+            <h3>Open source development projects</h3>
+            {workItemMiniData.map((itemProps, i) => <WorkItemMini {...itemProps} key={i} />)}
+        </Section>
+    );
 }
-

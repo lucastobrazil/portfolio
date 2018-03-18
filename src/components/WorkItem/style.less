@@ -1,6 +1,6 @@
 @import '../../styles/vars.less';
 @workItemPadding: (@basePadding * 2/3);
-@height: 280px;
+@height: 290px;
 
 .inner {
     position: relative;
@@ -21,11 +21,13 @@
     transition: box-shadow 150ms ease, transform 150ms ease;
     text-decoration: none;
 
-    &:hover, &:active, &:focus {
+    &:hover,
+    &:active,
+    &:focus {
         transform: perspective(500px) translate3d(0, -5px, 0);
         cursor: pointer;
         // box-shadow: 0 3px 5px rgba(0,0,0,0.3);
-        box-shadow: 0 30px 30px rgba(0,0,0,.12);
+        box-shadow: 0 30px 30px rgba(0, 0, 0, 0.12);
     }
 }
 
@@ -45,16 +47,16 @@
     font-size: @fontSizeS;
     background: @white;
     color: @lightGrey;
-    width: 100%;
-    &, h1 {
-        font-family: @fontFamilySansSerif;
-    }
+    max-width: 100%;
+    line-height: 1.6;
+
     h1 {
         font-size: @fontSize;
         font-weight: 500;
         margin: @workItemPadding;
         z-index: 2;
         margin: 0;
+        margin-bottom: (@basePadding / 4);
         color: @offBlack;
     }
 }

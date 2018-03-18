@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import styles from './style.less';
 
@@ -11,19 +11,18 @@ const propTypes = {
 };
 
 const defaultProps = {
-    onClick: () => { },
-    tools: []
+    onClick: () => {},
+    tools: [],
 };
 
-export default function WorkItem({ title, role, modalContent, linkUrl, style }) {
+export default function WorkItem({ title, byline, modalContent, linkUrl, style }) {
     return (
         <article className={styles.container}>
             <Link className={styles.inner} to={`/${linkUrl}`}>
-                <header className={styles.image} style={{ ...style }} >
-                </header>
+                <header className={styles.image} style={{ ...style }} />
                 <section className={styles.content}>
                     <h1>{title}</h1>
-                    {role}
+                    {byline}
                 </section>
             </Link>
         </article>

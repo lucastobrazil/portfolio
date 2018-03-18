@@ -5,15 +5,24 @@ import ProfileBubble from '../../components/ProfileBubble';
 import styles from './style.less';
 import { LINKS } from '../constants';
 export default function Home({ className, children }) {
-    return <section className={styles.container}>
-        <Inner className={styles.inner}>
-            <h1>I’m a UI Designer, Front End Developer and Design Team Coordinator.</h1>
-            <p className={styles.subHeading}>I’m passionate about people, innovative technology and building powerful and impactful solutions.</p>
-            <Link to={`/${LINKS.WORK}`}>See my work</Link>
-            <div className={styles.bubbleContainer}>
-                <span className={styles.greeting}><span role="img" className={styles.emoji} aria-label="Waving emoji">👋</span> Hi there!</span>
-                <ProfileBubble />
-            </div>
-        </Inner>
-    </section>;
+    return (
+        <section className={styles.container}>
+            <Inner className={styles.inner}>
+                <h1>Product Designer, Developer and Leader.</h1>
+                <p className={styles.subHeading}>
+                    I am passionate about design, people, innovative technology and building powerful and impactful
+                    solutions.
+                </p>
+                <Link to={`/${LINKS.WORK}`}>See my work</Link>
+                <div className={styles.bubbleContainer}>
+                    <span className={styles.greeting}>
+                        <span role="img" className={styles.emoji} aria-label="Waving emoji">
+                            👋
+                        </span>
+                    </span>
+                    <ProfileBubble />
+                </div>
+            </Inner>
+        </section>
+    );
 }

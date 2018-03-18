@@ -4,29 +4,40 @@ import ToolsIcon from '../ToolsIcon';
 import Image from '../Image';
 import Section from '../Section';
 import classNames from 'classnames';
+import { WorkItemsSection } from '../../pages/Work';
 
-export default function WorkItemDetail({ title, role, year, linkUrl, modalContent, history }) {
-    const { jobArt, jobDescription, jobOverview, tools, sections } = modalContent;
+export default function WorkItemDetail({ title, role, year, linkUrl, modalContent, history, style }) {
+    const { jobArt, jobBg, jobDescription, jobOverview, tools, sections } = modalContent;
     const { team, tasks } = jobOverview;
     return (
         <Fragment>
             <Section className={classNames(styles.section, styles.introSection)}>
                 {/* <BackButton className={styles.back} /> */}
                 <h1 className={styles.mainTitle}>{title}</h1>
-                <h2 className={styles.role}>{role} &middot; {year}</h2>
-
+                <h2 className={styles.role}>
+                    {role} &middot; {year}
+                </h2>
+            </Section>
+            <div
+                className={styles.artSection}
+                style={{
+                    backgroundColor: style.backgroundColor,
+                    backgroundImage: `url(${jobBg})`,
+                }}
+            />
+            <Section>
                 <div className={styles.jobDetails}>
                     <div>
                         <h2>Team</h2>
                         <p>{team}</p>
-                        <h2>About the Project</h2>
+                        <h2>Overview</h2>
                         <p>{jobDescription}</p>
-                        {tasks &&
+                        {tasks && (
                             <Fragment>
-                                <h2>Overview of Tasks</h2>
+                                <h2>Tasks</h2>
                                 {tasks}
                             </Fragment>
-                        }
+                        )}
                     </div>
                     <Image className={styles.jobArt} src={jobArt} />
                 </div>
@@ -34,9 +45,11 @@ export default function WorkItemDetail({ title, role, year, linkUrl, modalConten
             {sections.map((s, i) => <DetailBodySection {...s} key={i} />)}
             <Section altBg={true}>
                 <h2 className={styles.toolsHeader}>Tools</h2>
-                <div className={styles.toolsContainer}>
-                    {tools.map((tool, i) => <ToolsIcon icon={tool} key={i} />)}
-                </div>
+                <div className={styles.toolsContainer}>{tools.map((tool, i) => <ToolsIcon icon={tool} key={i} />)}</div>
+            </Section>
+            <Section>
+                <p>More of my work</p>
+                <WorkItemsSection />
             </Section>
         </Fragment>
     );
@@ -49,10 +62,8 @@ function DetailBodySection({ title, altBg, body, gallery }) {
             <div className={styles.detailBody}>{body}</div>
             {gallery}
         </Section>
-    )
+    );
 }
-
-
 
 // class BackButton extends Component {
 //     static contextTypes = {

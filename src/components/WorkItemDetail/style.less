@@ -9,7 +9,7 @@
 
     h2.role {
         margin: 0;
-        margin-bottom: @basePadding;
+        // margin-bottom: @basePadding;
         color: @subduedText;
         text-transform: none;
         font-weight: @fontWeightNormal;
@@ -21,8 +21,8 @@
         max-width: 100%;
     }
 
-
-    h1, h2 {
+    h1,
+    h2 {
         flex-basis: 100%;
     }
 
@@ -32,13 +32,13 @@
     }
 
     h2 {
-        font-size: @fontSize;
-        font-family: @fontFamilySansSerif;
-        margin-top: @basePadding;
-        color: @primaryColor;
+        // font-size: @fontSize;
+        // font-family: @fontFamilySansSerif;
+        // margin-top: @basePadding;
+        // color: @primaryColor;
 
         & + p,
-        & + ul, {
+        & + ul {
             margin-top: (@basePadding / 3);
         }
 
@@ -50,7 +50,7 @@
     .detailBody {
         display: flex;
         & > p,
-        & > ul, {
+        & > ul {
             margin-top: (@basePadding / 3);
         }
 
@@ -58,7 +58,6 @@
             flex-wrap: wrap;
         });
     }
-
 }
 
 .jobArt {
@@ -82,7 +81,7 @@
     cursor: pointer;
     z-index: 1;
     text-decoration: none;
-    opacity: .4;
+    opacity: 0.4;
     position: absolute;
     top: 20px;
     margin-left: -(@basePadding);
@@ -102,6 +101,12 @@
     flex-wrap: wrap;
     margin: 0 -1rem;
     img {
-        padding: .5rem 1rem;
+        padding: 0.5rem 1rem;
     }
+}
+
+.artSection {
+    padding: 100px 0;
+    background-size: cover;
+    background-position-y: 50%;
 }

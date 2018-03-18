@@ -11,20 +11,13 @@ const MmnPage = () => <WorkItemDetail {...CONTENT.MMN} />;
 const NmPage = () => <WorkItemDetail {...CONTENT.NM} />;
 const SiPage = () => <WorkItemDetail {...CONTENT.SI} />;
 
-export {
-    ArundelPage,
-    CddjPage,
-    HhrPage,
-    MmnPage,
-    NmPage,
-    SiPage,
-};
+export { ArundelPage, CddjPage, HhrPage, MmnPage, NmPage, SiPage };
 
 export const workItems = [
     <WorkItem {...CONTENT.SI} />,
+    <WorkItem {...CONTENT.NM} />,
     <WorkItem {...CONTENT.CDDJ} />,
     <WorkItem {...CONTENT.MMN} />,
     <WorkItem {...CONTENT.ADL} />,
     <WorkItem {...CONTENT.HHR} />,
-    <WorkItem {...CONTENT.NM} />,
 ];
