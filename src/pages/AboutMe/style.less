@@ -4,24 +4,19 @@
 .workItemGrid {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -(@basePadding / 3);
+    margin: 0 - (@basePadding / 3);
 }
 
 .container {
     img {
         max-width: 470px;
-    }
-}
-
-.intro {
-    display: flex;
-    img {
         margin-left: 20px;
+        float: right;
     }
     .widthMax(S, {
-        flex-wrap: wrap;
         img {
             margin: 0 auto;
+            float: none;
         }
     });
 }

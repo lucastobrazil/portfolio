@@ -77,6 +77,7 @@ export default {
         linkUrl: LINKS.ADL,
         byline: 'Getting creative with mixed media, films and music production.',
         style: {
+            backgroundColor: '#C5383A',
             backgroundImage: `url(${channelsPreview})`,
         },
         modalContent: {
@@ -84,7 +85,8 @@ export default {
             jobDescription:
                 "I love art projects - and luckily my musical project 'Arundel' provides me with many opportunities to do them! Over the years I’ve used this project as an outlet for many creative works.",
             jobOverview: {
-                team: 'Flying solo, sometimes with collaborators',
+                team:
+                    'As producer and composer, I led a team of musicians for live performances, collaborated with instrumentalists, vocalists and visual artists for recorded works and released many albums under an independent record label.',
                 tasks: (
                     <ul>
                         <li>Music composition, arrangement, recording and production</li>
@@ -133,7 +135,7 @@ export default {
                                     width="560"
                                     height="315"
                                     src="https://www.youtube.com/embed/ZGodcPuO7-Y?rel=0&amp;showinfo=0"
-                                    frameborder="0"
+                                    frameBorder="0"
                                     allow="autoplay; encrypted-media"
                                     allowFullScreen
                                 />
@@ -143,10 +145,10 @@ export default {
                                 <iframe
                                     title="Experimental art"
                                     src="https://player.vimeo.com/video/40588009?color=4777ff&title=0&byline=0&portrait=0"
-                                    frameborder="0"
-                                    webkitallowfullscreen
-                                    mozallowfullscreen
-                                    allowfullscreen
+                                    frameBorder="0"
+                                    webkitallowfullscreen="true"
+                                    mozallowfullscreen="true"
+                                    allowFullScreen
                                 />
                             </GalleryItem>
                         </Gallery>
@@ -170,17 +172,17 @@ export default {
         modalContent: {
             jobBg: require('./images/hhr_bg.jpg'),
             jobDescription:
-                'HeavenHR is an online HR tool to manage employee data, insurance, vacation requests and time tracking for freelancers. When I joined, the software had just come out of the MVP phase where many freelancers had been working on the front end (it was a bit messy...).',
+                'HeavenHR is an online HR tool to manage employee data, insurance, vacation requests and time tracking for freelancers. When I joined, the software had just come out of the MVP phase where many freelancers had been working on the front end - it was a great opportunity to experience life in a very early - stage start up.',
             jobOverview: {
                 team:
-                    'I was hired as the first senior front end developer at HeavenHR and worked with about fifteen back end developers. We had a dedicated web designer and product managers who prepared wireframes.',
+                    'As the first senior front end developer at Heaven HR, I worked with a team of 15 back end developers, a dedicated web designer and product managers.',
                 tasks: (
                     <ul>
                         <li>Refactoring old MVP code</li>
                         <li>Organising CSS (SASS) into a more modular format</li>
                         <li>Defining a design system for UI components</li>
                         <li>Implemented new landing page designs</li>
-                        <li>Helped organise the app&#39;s JavaScript code to be more modular</li>
+                        <li>Co-organised the app’s JavaScript code into a modular format</li>
                     </ul>
                 ),
             },
@@ -192,7 +194,7 @@ export default {
                     body: (
                         <ul>
                             <li>
-                                Helped build pages with Ajax requests instead of full page reloads after each change.
+                                Helped build pages with Ajax requests instead of full page reloads after each change
                             </li>
                             <li>Implemented inline editing of tables</li>
                         </ul>
@@ -261,7 +263,7 @@ export default {
         role: ROLES.UI_DEV,
         year: '2015',
         linkUrl: LINKS.MMN,
-        byline: 'Developing company goals into a new product strategy',
+        byline: 'Developing company goals into a new product strategy.',
         style: {
             backgroundColor: '#36CF75',
             backgroundImage: `url(${mmnPreview})`,
@@ -331,7 +333,7 @@ export default {
                     altBg: false,
                     body: (
                         <ul>
-                            <li>Users can manage advertising content that is displayed on TV screens in a venue.</li>
+                            <li>Users can manage advertising content that is displayed on TV screens in a venue</li>
                             <li>
                                 I designed and developed an interface to let users create their own
                                 &#39;Text-over-image&#39; advertisements in the browser
@@ -353,10 +355,10 @@ export default {
                                     src="https://player.vimeo.com/video/257383148?color=4777ff&title=0&byline=0&portrait=0"
                                     width="470"
                                     height="378"
-                                    frameborder="0"
-                                    webkitallowfullscreen
-                                    mozallowfullscreen
-                                    allowfullscreen
+                                    frameBorder="0"
+                                    webkitallowfullscreen="true"
+                                    mozallowfullscreen="true"
+                                    allowFullScreen
                                 />
                             </GalleryItem>
                         </Fragment>
@@ -372,7 +374,7 @@ export default {
         linkUrl: LINKS.NM,
         byline: 'Leading a team of designers to transform a brand.',
         style: {
-            backgroundColor: '#36CF75',
+            backgroundColor: '#ADD6D5',
             backgroundImage: `url(${nightlifePreview})`,
         },
         modalContent: {
@@ -385,8 +387,8 @@ export default {
                 tasks: (
                     <ul>
                         <li>
-                            <strong>Led all design projects</strong> for a company delivering music video and
-                            advertising solutions to over 3000 venues Australia-wide
+                            <strong>Led all design projects</strong> for Australia’s #1 music video and advertising
+                            solutions provider to over 3,000 venues Australia-wide
                         </li>
                         <li>
                             <strong>Designed marketing campaigns</strong>, digital artwork and user interfaces for two
@@ -400,21 +402,20 @@ export default {
                         <li>
                             <strong>Provided training</strong> in Adobe products to juniors at Nightlife HQ
                         </li>
-                        <li>
-                            <strong>Conducted meetings</strong> and daily standups communicating outcomes from
-                            management meetings
-                        </li>
+                        <li>Conducted meetings and daily standups communicating outcomes from management meetings</li>
                         <li>
                             <strong>Responsible for UI Design and Front End development</strong> of enterprise products
-                            for over 3000 clients / users
+                            for over 3,000 clients / users{' '}
                         </li>
                         <li>
                             <strong>Developed apps</strong> in PHP, MySQL, JS, Xcode, Java and Grunt build tools
                         </li>
                         <li>
-                            <strong>Designed</strong> internal reference documentation for our APIs
+                            Designed internal <strong>reference documentation</strong> for our APIs
                         </li>
-                        <li>Developed and maintained front and back end of corporate website</li>
+                        <li>
+                            <strong>Corporate website</strong> - developed and maintained front and back end
+                        </li>
                     </ul>
                 ),
             },
@@ -426,7 +427,7 @@ export default {
                     body: (
                         <ul>
                             <li>Designing all content for corporate website</li>
-                            <li>Exporting images and optimizing video</li>
+                            <li>Exporting images and optimising video</li>
                             <li>Developing a custom Twitter widget on the home page</li>
                         </ul>
                     ),
@@ -445,10 +446,10 @@ export default {
                                 src="https://player.vimeo.com/video/260618850?color=4777ff&title=0&byline=0&portrait=0"
                                 width="640"
                                 height="359"
-                                frameborder="0"
-                                webkitallowfullscreen
-                                mozallowfullscreen
-                                allowfullscreen
+                                frameBorder="0"
+                                webkitallowfullscreen="true"
+                                mozallowfullscreen="true"
+                                allowFullScreen
                             />
                         </Gallery>
                     ),
@@ -492,17 +493,12 @@ export default {
             backgroundImage: `url(${siPreview})`,
         },
         modalContent: {
-            jobBg: require('./images/si_bg.jpg'),
+            jobBg: require('./images/si_bg.png'),
             jobDescription:
                 'Small Improvements is a web-based feedback tool where companies and their staff can conduct 360º feedback rounds, set objectives, conduct 1:1 meetings, give praise / kudos and write formal performance reviews.',
             jobOverview: {
-                team: (
-                    <p>
-                        As Design Coordinator, I led design-specific projects and workshops such as the style guide and
-                        evolution of the design system. I helped grow the design team from 3 to 6. Development teams
-                        were cross-functional and consisted of one designer and two full-stack developers.
-                    </p>
-                ),
+                team: `As Design Coordinator, I led design-specific projects and workshops such as the style guide and evolution of the design system. I helped grow the design team from 3 to 6. Development teams were cross-functional and consisted of one designer and two full-stack developers.
+                `,
                 tasks: (
                     <ul>
                         <li>Coordinate design projects across teams and manage workloads</li>
@@ -527,13 +523,13 @@ export default {
                     body: (
                         <ul>
                             <li>
-                                The latest feature at Small Improvements, designed as a place to keep track of your 1:1
-                                meetings. Both participants can prepare an agenda (Talking Points) and add notes
+                                The latest feature at Small Improvements is designed as a place to keep track of your
+                                1:1 meetings. Both participants can prepare an agenda (Talking Points) and add notes
                                 afterwards
                             </li>
                             <li>
                                 Designed UI for individual meetings, dashboard and meetings ‘space’ where users can see
-                                all of their meetings
+                                all of their 1:1 meetings
                             </li>
                             <li>Coded many reusable React components</li>
                         </ul>
@@ -553,12 +549,15 @@ export default {
                         <ul>
                             <li>
                                 In an effort to increase transparency and engagement within the tool, we created an
-                                Activity Stream to present recent happenings.
+                                Activity Stream to present recent happenings
                             </li>
-                            <li>I designed the UI of many content items</li>
                             <li>
-                                Created detailed specifications of how content would be aggregated and the different
-                                edge cases that can occur
+                                Designed the UI of many content items appearing in the stream in Sketch and coded them
+                                in React
+                            </li>
+                            <li>
+                                Created detailed specifications of how different activity content would be aggregated
+                                and the different edge cases that can occur
                             </li>
                         </ul>
                     ),
@@ -584,13 +583,13 @@ export default {
                     altBg: true,
                     body: (
                         <ul>
-                            <li>Organised our components into a design system.</li>
+                            <li>Organised our components into a design system</li>
                             <li>
-                                The living style guide was built to document the components and UI patterns used within
-                                the tool and also to develop a vision for the future.
+                                Built a system to document the components and UI patterns used within the tool and also
+                                to develop a vision for the future of Small Improvements' UI
                             </li>
                             <li>
-                                Acted as an advocate for using it and encouraged devs to proactively document new
+                                Acted as an advocate for using it and encouraged developers to proactively document new
                                 components
                             </li>
                             <li>
@@ -613,34 +612,29 @@ export default {
                 {
                     title: 'Responsive overhaul and style updates',
                     body: (
-                        <ul>
-                            <li>
-                                When I joined, we were in the process of converting the SI app to be mobile-responsive.
-                            </li>
-                            <li>
-                                We took this opportunity to rethink and refactor a lot of the code to follow a
-                                consistent pattern and structure.
-                            </li>
-                            <li>
-                                This also meant an opportunity to update the style of many components (well, basically
-                                all of them!)
-                            </li>
-                        </ul>
+                        <span>
+                            <ul>
+                                <li>
+                                    When I joined, we were in the process of converting the SI app to be
+                                    mobile-responsive.
+                                </li>
+                                <li>
+                                    We took this opportunity to rethink and refactor a lot of the code to follow a
+                                    consistent pattern and structure.
+                                </li>
+                                <li>
+                                    This also meant an opportunity to update the style of many components (well,
+                                    basically all of them!)
+                                </li>
+                                <li>
+                                    Rolled out a fresh new colour palette across the app based on colours in new
+                                    illustrations provided by a freelance artist
+                                </li>
+                            </ul>
+                        </span>
                     ),
                     gallery: (
                         <Gallery>
-                            <GalleryItem type="video">
-                                <iframe
-                                    title="Video of me at Small Improvements"
-                                    src="https://player.vimeo.com/video/180569819?color=4777ff&title=0&byline=0&portrait=0"
-                                    width="470"
-                                    height="264"
-                                    frameBorder="0"
-                                    webkitallowfullscreen="true"
-                                    mozallowfullscreen="true"
-                                    allowFullScreen="true"
-                                />
-                            </GalleryItem>
                             <GalleryItem
                                 style={{ width: '100%' }}
                                 src={siBeforeAfter}

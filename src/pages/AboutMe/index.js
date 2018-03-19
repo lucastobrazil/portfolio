@@ -9,33 +9,51 @@ export default function AboutMe() {
         <Section altBg={true} className={styles.container}>
             <div>
                 <h1>{SECTIONS.ABOUT}</h1>
-                <div className={styles.intro}>
-                    <p>
-                        Hi, I’m Lucas! A Product Designer, Developer and Leader. I'm from Australia and now living in
-                        Berlin with my wife Claire and son Charlie. We love travel, people, music, art, projects and
-                        nature.
-                    </p>
-                    <ProfileBubble />
-                </div>
-                <h3>Now, onto the professional stuff...</h3>
+                <ProfileBubble />
                 <p>
-                    My ten years of experience has covered a broad range of areas. From design and digital media
-                    production to HTML, CSS, native and JavaScript development, what I’ve learned about myself is that I
-                    love solving problems, working with people and using tools to build things.
+                    I'm an experienced product designer, developer and leader. I am passionate about design, people,
+                    innovative technology and building powerful and impactful solutions. I have a unique ability to
+                    speak the language of clients and senior executives whilst also communicating directly with design
+                    and development teams to deliver work that solves real-world problems.
                 </p>
+                <p>
+                    With over ten years of professional experience working internationally in marketing, design and
+                    software development teams, I have come to love both the <strong>building</strong> of{' '}
+                    <em>"all the things"</em> and <strong>leading</strong> and coordinating projects. Results, clear
+                    communication, accountability and passion are qualities I live by.
+                </p>
+
                 <p>
                     After graduating from Queensland University of Technology (Australia) with Bachelor of Creative
-                    Industries and a Bachelor of Business, my roles have been focused in the industries of HR and
-                    entertainment technology. I've contributed to the success of numerous brands and products and in
-                    that time my natural leadership and interpersnal skills have often placed me in leadership
-                    positions.
+                    Industries <em>(Media & Communication)</em> and a Bachelor of Business{' '}
+                    <em>(Advertising & Marketing)</em>, my work has been focused in the Human Resources and
+                    Entertainment technology industries. I've contributed to the success of{' '}
+                    <a
+                        href="https://www.huffingtonpost.com.au/2016/12/18/this-app-lets-you-choose-the-music-you-hear-in-bars-and-gyms_a_21630551/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        well-recognised
+                    </a>{' '}
+                    and <strong>customer-revered</strong> national brands and products and in that time my natural
+                    leadership and interpersonal skills have often placed me in leadership positions.
                 </p>
                 <p>
-                    Beyond my tertiary qualifications and experience, my personality and compassion for others means I
-                    am ready to work on any project with any team. I enjoy taking the lead and being the organiser, but
+                    Beyond my tertiary qualifications and experience, my personality and <strong>compassion</strong> for
+                    others means I can mobilise and motivate teams effectively and thrive in{' '}
+                    <strong>deadline-driven environments</strong>. I enjoy taking the lead and being the organiser, but
                     also love to get my hands dirty at a grassroots level.
                 </p>
 
+                <h3>On a personal note...</h3>
+                <p>
+                    I'm from Australia and now living in Berlin with my wife Claire and son Charlie. We love travel,
+                    people, music, art, projects and nature. Being Aussie, we enjoy the sunshine - but also the cold,
+                    grey weather of Berlin too!{' '}
+                    <span role="img" aria-label="Sun emoji">
+                        🌞
+                    </span>
+                </p>
                 <p>
                     <strong>
                         Keen to chat? Let's connect on{' '}

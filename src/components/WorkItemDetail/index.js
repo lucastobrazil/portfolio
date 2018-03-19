@@ -1,13 +1,12 @@
 import React, { Fragment } from 'react';
 import styles from './style.less';
 import ToolsIcon from '../ToolsIcon';
-import Image from '../Image';
 import Section from '../Section';
 import classNames from 'classnames';
 import { WorkItemsSection } from '../../pages/Work';
 
 export default function WorkItemDetail({ title, role, year, linkUrl, modalContent, history, style }) {
-    const { jobArt, jobBg, jobDescription, jobOverview, tools, sections } = modalContent;
+    const { jobBg, jobDescription, jobOverview, tools, sections } = modalContent;
     const { team, tasks } = jobOverview;
     return (
         <Fragment>
@@ -28,10 +27,10 @@ export default function WorkItemDetail({ title, role, year, linkUrl, modalConten
             <Section>
                 <div className={styles.jobDetails}>
                     <div>
-                        <h2>Team</h2>
-                        <p>{team}</p>
                         <h2>Overview</h2>
                         <p>{jobDescription}</p>
+                        <h2>Team</h2>
+                        <p>{team}</p>
                         {tasks && (
                             <Fragment>
                                 <h2>Tasks</h2>
@@ -39,7 +38,6 @@ export default function WorkItemDetail({ title, role, year, linkUrl, modalConten
                             </Fragment>
                         )}
                     </div>
-                    <Image className={styles.jobArt} src={jobArt} />
                 </div>
             </Section>
             {sections.map((s, i) => <DetailBodySection {...s} key={i} />)}
