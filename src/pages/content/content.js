@@ -56,9 +56,9 @@ export const workItemMiniData = [
         linkLabel: 'Github',
     },
     {
-        title: 'cornerstone-components',
-        description: "Custom-build components for the Wordpress 'cornerstone' editor",
-        linkUrl: '#',
+        title: 'cornerstone-custom-elements',
+        description: "Custom-built components for the Wordpress 'Cornerstone' editor",
+        linkUrl: 'https://github.com/lucastobrazil/si-cornerstone-elements',
         linkLabel: 'Github',
     },
     {
