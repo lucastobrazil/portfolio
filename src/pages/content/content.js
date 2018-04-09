@@ -160,7 +160,7 @@ export default {
     HHR: {
         title: 'HeavenHR',
         role: ROLES.FE_DEV,
-        year: '2016',
+        year: '2015',
         linkUrl: LINKS.HHR,
         byline: 'Transform the UI of a fresh new SaaS platform for HR tech.',
         style: {
@@ -484,7 +484,7 @@ export default {
     SI: {
         title: 'Small Improvements',
         role: ROLES.UI_DEV,
-        year: '2017 - Present',
+        year: '2016 - Present',
         linkUrl: LINKS.SI,
         byline: 'Evolving a team, a product and building awesome features.',
         style: {
