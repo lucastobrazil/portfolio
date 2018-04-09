@@ -81,10 +81,12 @@
     cursor: pointer;
     z-index: 1;
     text-decoration: none;
-    opacity: 0.4;
+    opacity: 0.2;
     position: absolute;
     top: 20px;
-    margin-left: -(@basePadding);
+    padding: 0;
+    margin-left: -(@basePadding * 0.5);
+    transition: opacity 250ms ease-in-out;
 
     img {
         vertical-align: text-bottom;

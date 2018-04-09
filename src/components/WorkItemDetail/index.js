@@ -1,8 +1,10 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, Component } from 'react';
+import PropTypes from 'prop-types';
 import styles from './style.less';
 import ToolsIcon from '../ToolsIcon';
 import Section from '../Section';
 import classNames from 'classnames';
+import backIcon from './images/back_x.svg';
 import { WorkItemsSection } from '../../pages/Work';
 
 export default function WorkItemDetail({ title, role, year, linkUrl, modalContent, history, style }) {
@@ -11,7 +13,7 @@ export default function WorkItemDetail({ title, role, year, linkUrl, modalConten
     return (
         <Fragment>
             <Section className={classNames(styles.section, styles.introSection)}>
-                {/* <BackButton className={styles.back} /> */}
+                <BackButton className={styles.back} />
                 <h1 className={styles.mainTitle}>{title}</h1>
                 <h2 className={styles.role}>
                     {role} &middot; {year}
@@ -63,18 +65,16 @@ function DetailBodySection({ title, altBg, body, gallery }) {
     );
 }
 
-// class BackButton extends Component {
-//     static contextTypes = {
-//         router: PropTypes.object, // replace with PropTypes.object if you use them
-//     }
+class BackButton extends Component {
+    static contextTypes = {
+        router: PropTypes.object, // replace with PropTypes.object if you use them
+    };
 
-//     render() {
-//         return (
-//             <button
-//                 className={this.props.className}
-//                 onClick={this.context.router.history.goBack}>
-//                 <img src={backIcon} alt="Back to my work" /> My Work
-//             </button>
-//         )
-//     }
-// }
+    render() {
+        return (
+            <button className={this.props.className} onClick={this.context.router.history.goBack}>
+                <img src={backIcon} alt="Back to my work" /> My Work
+            </button>
+        );
+    }
+}
